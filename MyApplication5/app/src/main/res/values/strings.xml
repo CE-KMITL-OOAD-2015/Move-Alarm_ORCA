@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Move Alarm</string>
+    <string name="action_settings">Settings</string>
+    <string name="next_alarm">NEXT ALARM</string>
+    <string name="hour">HOUR</string>
+    <string name="minute">MINUTE</string>
+    <string name="second">SECOND</string>
+    <string name="friends">Friends</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="howtouse">How to use ?</string>
+    <string name="setalarm">Set Alarm</string>
+    <string name="title_activity_set_alarm">SetAlarmActivity</string>
+    <string name="activate">Activate</string>
+    <string name="startofficetime">Start office time</string>
+    <string name="endofficetime">End office time</string>
+    <string name="setperiod">Set period</string>
+    <string name="workingday">Working day</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="sound">Sound</string>
+    <string name="vibration">Vibration</string>
+</resources>
