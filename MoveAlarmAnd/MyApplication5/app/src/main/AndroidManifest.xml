@@ -43,6 +43,26 @@
             android:label="@string/title_activity_working_day"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".SetPeriodActivity"
+            android:label="@string/title_activity_set_period"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".StartOfficeActivity"
+            android:label="@string/title_activity_start_office"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".EndOfficeActivity"
+            android:label="@string/title_activity_end_office"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

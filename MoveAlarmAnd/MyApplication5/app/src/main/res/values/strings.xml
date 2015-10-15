@@ -30,4 +30,16 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
+    <string name="title_activity_set_period">SetPeriodActivity</string>
+    <string name="thirtymin">30 minutes</string>
+    <string name="fourtymin">40 minutes</string>
+    <string name="fiftymin">50 minutes</string>
+    <string name="onehour">1 hour</string>
+    <string name="a_hour_and_ten">1 hour 10 minutes</string>
+    <string name="a_hour_and_twenty">1 hour 20 minutes</string>
+    <string name="a_hour_haft">1 hour 30 minutes</string>
+    <string name="two_hours">2 hours</string>
+    <string name="title_activity_start_office">StartOfficeActivity</string>
+    <string name="title_activity_end_office">EndOfficeActivity</string>
+    <string name="stopofficetime">End Office Time</string>
 </resources>

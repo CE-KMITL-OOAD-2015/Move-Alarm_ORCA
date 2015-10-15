@@ -21,4 +21,5 @@
     <dimen name="scircleboxH">80dp</dimen>
     <dimen name="scircleboxW">80dp</dimen>
     <dimen name="dimenbox">60dp</dimen>
+    <dimen name="gapheight">50dp</dimen>
 </resources>

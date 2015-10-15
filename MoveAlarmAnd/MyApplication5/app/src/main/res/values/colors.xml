@@ -9,4 +9,6 @@
     <color name="bodybg">#FFFFFF</color>
     <color name="dimenboxcolor">#ffffff</color>
     <color name="oncolor">#00dc28</color>
+    <color name="summit">#ffb70e</color>
+    <color name="white">#FFFFFF</color>
 </resources>

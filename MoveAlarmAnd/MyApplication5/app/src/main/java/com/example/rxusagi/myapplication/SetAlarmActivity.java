@@ -113,4 +113,13 @@ public class SetAlarmActivity extends AppCompatActivity {
     public void onClickWorking(View v){
         startActivity(new Intent(getApplicationContext(), WorkingDay.class));
     }
+    public void onSetPeriod(View v){
+        startActivity(new Intent(getApplicationContext(), SetPeriodActivity.class));
+    }
+    public  void onStartOfficeTime(View v){
+        startActivity(new Intent(getApplicationContext(), StartOfficeActivity.class));
+    }
+    public  void onEndOfficeTime(View v){
+        startActivity(new Intent(getApplicationContext(), EndOfficeActivity.class));
+    }
 }
