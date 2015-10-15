@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Test1</string>
+    <string name="action_settings">Settings</string>
+    <string name="Set_Alarm">Set_Alarm</string>
+    <string name="Start_Offine_Time">Start Offine Time</string>
+    <string name="End_Offine_Time">End Offine Time</string>
+    <string name="set_period">set period</string>
+    <string name="working_day">working day</string>
+</resources>

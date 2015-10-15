@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/headBar"
+        android:scrollbarSize="10dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:fillViewport="false">
+        <LinearLayout
+            android:id="@+id/layoutScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gapheight"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+                >
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_width="@dimen/text_width"
+                    android:layout_height="match_parent"
+                    android:text="ACTIVATE"
+                    android:id="@+id/textView"
+                    android:gravity="center_vertical"/>
+
+                <Switch
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "
+                    android:id="@+id/switch1"
+                    android:checked="false"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gapheight"
+                android:layout_margin="1dp"
+                >
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_width="@dimen/text_width"
+                    android:layout_height="match_parent"
+                    android:text="@string/Start_Offine_Time"
+                    android:id="@+id/textView2"
+                    android:textAlignment="viewStart"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gapheight"
+                android:layout_margin="1dp"
+                >
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_width="@dimen/text_width"
+                    android:layout_height="match_parent"
+                    android:text="@string/End_Offine_Time"
+                    android:id="@+id/textView3"
+                    android:textAlignment="viewStart"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gapheight"
+                android:layout_margin="1dp"
+                >
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_width="@dimen/text_width"
+                    android:layout_height="match_parent"
+                    android:text="@string/set_period"
+                    android:id="@+id/textView4"
+                    android:textAlignment="viewStart"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"/>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gapheight"
+                android:layout_margin="1dp"
+                >
+                <Button
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="false"
+                    android:layout_width="@dimen/text_width"
+                    android:layout_height="match_parent"
+                    android:text="@string/working_day"
+                    android:id="@+id/textView5"
+                    android:textAlignment="viewStart"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"/>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
