@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,7 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.concurrent.TimeUnit;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 @SuppressLint("NewApi")
@@ -37,10 +39,29 @@ public class MainActivity extends AppCompatActivity {
     private TextView mdoubleColon;
     private TextView second10;
     private TextView second1;
+    private CounterClass timer;
     @Override
     protected void onStart() {
         super.onStart();
         mainActivity = this;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        count();
+    }
+
+    private void count(){
+        if(alarmManagement.getNextTimeMillisec()!=0) {
+            timer = new CounterClass(alarmManagement.getNextTimeMillisec(), 1000);
+            timer.start();
+        }
+    }
+    @Override
+    protected void onPause() {
+        timer.cancel();
+        super.onPause();
     }
 
     public  MainActivity instance(){
@@ -72,13 +93,13 @@ public class MainActivity extends AppCompatActivity {
 
     protected void setinit(){
         hour10.setText("0");
-        hour1.setText("1");
+        hour1.setText("0");
         hdoubleColon.setText(":");
-        minute10.setText("2");
-        minute1.setText("3");
+        minute10.setText("0");
+        minute1.setText("0");
         mdoubleColon.setText(":");
-        second10.setText("4");
-        second1.setText("5");
+        second10.setText("0");
+        second1.setText("0");
     }
 
     public void onSetAlarmClicked(View v){
@@ -88,6 +109,43 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSettingClicked(View v){
         startActivity(new Intent(getApplicationContext(),SettingActivity.class));
+    }
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
+    @SuppressLint("NewApi")
+    public class CounterClass extends CountDownTimer {
+
+        /**
+         * @param millisInFuture    The number of millis in the future from the call
+         *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
+         *                          is called.
+         * @param countDownInterval The interval along the way to receive
+         *                          {@link #onTick(long)} callbacks.
+         */
+        public CounterClass(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            long mil = millisUntilFinished;
+            hour10.setText(""+(TimeUnit.MILLISECONDS.toHours(mil)/10));
+            hour1.setText(""+(TimeUnit.MILLISECONDS.toHours(mil)%10));
+            minute10.setText(""+(TimeUnit.MILLISECONDS.toMinutes(mil)-TimeUnit.MILLISECONDS.toHours(mil)*60)/10);
+            minute1.setText(""+(TimeUnit.MILLISECONDS.toMinutes(mil)-TimeUnit.MILLISECONDS.toHours(mil)*60)%10);
+            second10.setText(""+(TimeUnit.MILLISECONDS.toSeconds(mil)-TimeUnit.MILLISECONDS.toMinutes(mil)*60)/10);
+            second1.setText(""+(TimeUnit.MILLISECONDS.toSeconds(mil)-TimeUnit.MILLISECONDS.toMinutes(mil)*60)%10);
+        }
+
+        @Override
+        public void onFinish() {
+            hour10.setText("X");
+            hour1.setText("X");
+            minute10.setText("X");
+            minute1.setText("X");
+            second10.setText("X");
+            second1.setText("X");
+            count();
+        }
     }
 
 }
