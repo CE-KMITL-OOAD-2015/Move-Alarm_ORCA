@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - move_alarm@localhost" uuid="34a999f2-048f-4bff-9382-ef25ec6dcb2c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>move_alarm.*</schema-pattern>
+      <default-schemas>move_alarm.*</default-schemas>
+    </data-source>
+  </component>
+</project>

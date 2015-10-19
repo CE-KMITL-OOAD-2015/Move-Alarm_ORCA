@@ -1,6 +1,7 @@
 package com.ma;
 
-import java.time.MonthDay;
+import java.sql.Date;
+
 
 
 /**
@@ -9,14 +10,20 @@ import java.time.MonthDay;
 public class Member {
     private String firstname,lastname,gender,email,status;
     private Score score;
-    private MonthDay birthday;
+    private Date birthday;
     private int age;
+
+    public Member(String firstname,String lastname,String gender){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.gender = gender;
+    }
 
     public int getAge() {
         return age;
     }
 
-    public MonthDay getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
@@ -48,7 +55,7 @@ public class Member {
         this.age = age;
     }
 
-    public void setBirthday(MonthDay birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 

@@ -30,16 +30,14 @@ public class JDBC {
 
 
     public ResultSet sql(String cmd){
-        Statement stmt = null;
         ResultSet rs = null;
 
         try{
-            stmt = connection.createStatement();
+            Statement stmt = connection.createStatement();
+
             rs = stmt.executeQuery(cmd);
-            if(stmt.execute(cmd)){
-                rs = stmt.getResultSet();
-            }
         }catch (SQLException ex){
+            ex.printStackTrace();
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
