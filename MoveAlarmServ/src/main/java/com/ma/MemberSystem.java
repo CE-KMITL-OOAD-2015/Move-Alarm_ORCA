@@ -1,12 +1,10 @@
 package com.ma;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by Admin on 10/15/2015.
@@ -14,45 +12,67 @@ import java.sql.SQLException;
 @RestController
 public class MemberSystem {
 
-    JDBC jdbc = new JDBC();
+        JDBC jdbc = new JDBC();
 
-    @RequestMapping("/connect")
-    public JDBC connect(){
-        return jdbc;
-    }
+        @RequestMapping("/connect")
+        public JDBC connect(){
+            return jdbc;
+        }
 
-    @RequestMapping("/")
-    public String test(){
-        return "Hello Server";
-    }
+        @RequestMapping("/")
+        public String test(){
+            return "Hello Move Alarm Project Server";
+        }
 
 
-    @RequestMapping("/getMember")
-    public Member getMemberByID(@RequestParam(value = "userID",required = false)
-                                    String userID){
-        //handle member
-        Member member = null;
-            try {
-                ResultSet rs = jdbc.sql("SELECT * FROM user WHERE id_fb = " + userID);
-                System.out.println(rs);
-                rs.next();
-                member = new Member(rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5));
-                //member.setAge(rs.getInt("Age"));
-                member.setBirthday(rs.getDate("birth_day"));
-                //member.setEmail(rs.getString(8));
-                //member.setScore(rs.getInt(4));
-                //member.setStatus(rs.getString(9));
+        @RequestMapping("/getMember")
+        public Object getMemberByID(@RequestParam(value = "userID",required = false)
+                                        String userID){
+            //handle member
+            Member member = jdbc.getMemberData(userID);
+            if(member != null)
                 return member;
+            else
+                return "not found member";
 
-            }catch (SQLException ex) {
-                ex.printStackTrace();
-                System.out.println("SQLException: " + ex.getMessage());
-                System.out.println("SQLState: " + ex.getSQLState());
-                System.out.println("VendorError: " + ex.getErrorCode());
+        }
+
+        /**
+         * test to check json
+         */
+        @RequestMapping("/getFriendListTest")
+        public ArrayList<Member> testFriend(){
+            ArrayList<Member> list = new ArrayList<Member>();
+            list.add(new Member());
+            list.add(new Member());
+            list.add(new Member());
+            return list;
+        }
+
+        @RequestMapping(value = "/getFriendList", method = RequestMethod.POST)
+        public ArrayList<Object> getFriendListID(@RequestBody ArrayList<String> listID){
+            ArrayList<Object> list = new ArrayList<>();
+            Iterator<String> it = listID.iterator();
+            while(it.hasNext()) {
+               list.add(getMemberByID(it.next()));
             }
-        return member;
-    }
+            return list;
+        }
+
+        @RequestMapping(value = "/regMember",method=RequestMethod.POST)
+        public String regMember(@RequestBody  Member member){
+            if(member != null){
+                boolean complete;
+                Object temp = getMemberByID(member.getIdFb() + "");
+                if(temp.getClass().equals(String.class))
+                    complete = jdbc.insertMember(member);
+                else
+                    complete = jdbc.updateMember(member);
+                return (complete)?"Success":"Failed";
+            }
+            else
+                return "no data in request body";
+        }
+
 
 }
