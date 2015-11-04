@@ -1,13 +1,16 @@
-package com.ma;
+package com.ma.model;
+
+
+import com.google.gson.Gson;
 
 import java.sql.Date;
-
 
 
 /**
  * Created by Admin on 10/16/2015.
  */
-public class Member implements Comparable<Member>{
+public class Member{
+    private int pk;
     private String firstname,lastname,gender,email,status;
     private long idFb;
     private int score;
@@ -16,13 +19,18 @@ public class Member implements Comparable<Member>{
 
 
     public Member(){
-        this("name","surname","lesbean",321123);
+        this("firstnm dummy","Surnm member","Unknown",0);
     }
-    public Member(String firstname,String lastname,String gender,long idFb){
+
+    public Member(String firstname,String lastname,String gender,int pk){
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;
-        this.idFb = idFb;
+        this.pk = pk;
+    }
+
+    public int getPk() {
+        return pk;
     }
 
     public int getAge() {
@@ -97,13 +105,13 @@ public class Member implements Comparable<Member>{
 
     @Override
     public String toString() {
-        return String.format("Name : %s %s \n Age : %d\n gender %s",firstname,lastname,age,gender);
+        return String.format("Name : %s %s \n Age : %d\n gender %s\n",firstname,lastname,age,gender);
     }
 
-    @Override
-    public int compareTo(Member o) {
-        if(score<o.getScore())return -1;
-        else if(score==o.getScore())return  0;
-        else return 1;
+    public Member formGson(String json){
+        Gson gson = new Gson();
+        Member member = formGson(json);
+        return member;
     }
+
 }

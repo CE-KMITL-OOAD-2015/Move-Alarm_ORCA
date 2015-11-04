@@ -1,5 +1,7 @@
 package com.ma;
 
+import com.google.gson.Gson;
+import com.ma.model.Member;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

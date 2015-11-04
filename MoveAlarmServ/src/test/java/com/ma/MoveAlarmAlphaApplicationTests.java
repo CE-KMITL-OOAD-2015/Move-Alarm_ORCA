@@ -13,6 +13,7 @@ public class MoveAlarmAlphaApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }
