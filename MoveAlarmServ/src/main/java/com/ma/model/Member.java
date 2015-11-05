@@ -103,15 +103,23 @@ public class Member{
         this.idFb = idFb;
     }
 
+    public void setPk(int pk) {this.pk = pk;  }
+
     @Override
     public String toString() {
         return String.format("Name : %s %s \n Age : %d\n gender %s\n",firstname,lastname,age,gender);
     }
 
-    public Member formGson(String json){
+    public static Member formGson(String json){
         Gson gson = new Gson();
-        Member member = formGson(json);
+        Member member = gson.fromJson(json,Member.class);
         return member;
+    }
+
+    public String toJson(){
+        Gson gson = new Gson();
+        String json = gson.toJson(this);
+        return json;
     }
 
 }

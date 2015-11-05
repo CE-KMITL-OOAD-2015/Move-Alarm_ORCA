@@ -139,7 +139,7 @@ public class JDBC {
             System.out.println(pstmt);
             pstmt.executeUpdate();
             System.out.println("Update successfully");
-            return 0;//not effect to pk
+            return member.getPk();//not effect to pk
         }catch (SQLException e){
             e.printStackTrace();
             return -1;

@@ -1,5 +1,7 @@
 package com.ma.model;
 
+import com.google.gson.Gson;
+
 import java.util.*;
 
 /**
@@ -22,6 +24,8 @@ public class LeaderBoard  {
         return leaderboard;
     }
 
-
-
+    public String toJSON(){
+        Gson gson = new Gson();
+        return gson.toJson(this);
+    }
 }
