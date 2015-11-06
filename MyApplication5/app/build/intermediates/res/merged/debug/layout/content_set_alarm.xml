@@ -89,7 +89,9 @@
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="15dp"
-                android:layout_alignParentRight="true"/>
+                android:layout_alignParentRight="true"
+                android:onClick="onAct"
+                android:id="@+id/activateswitch"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -188,15 +190,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@id/hrmn"
-                android:id="@+id/numhrmn"
-                android:textSize="@dimen/normalfontH"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
         </RelativeLayout>
         <RelativeLayout
             android:layout_below="@id/setperiod"
@@ -209,7 +202,9 @@
             android:layout_height="@dimen/dimenbox"
             android:id="@+id/workingday"
             android:layout_below="@id/lineD"
-            android:background="@color/dimenboxcolor">
+            android:background="@color/dimenboxcolor"
+            android:onClick="onClickWorking"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -233,6 +228,51 @@
             android:layout_below="@id/workingday"
             android:layout_width="match_parent"
             android:layout_height="2dp"
+            android:id="@+id/lineF">
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimenbox"
+            android:id="@+id/style"
+            android:layout_below="@id/lineF"
+            android:background="@color/dimenboxcolor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/style"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:textSize="@dimen/normalfontH"
+                android:id="@+id/st"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/st"
+                android:textSize="@dimen/normalfontH"
+                android:id="@+id/sketchsprint"
+                />
+            <Switch
+                android:backgroundTint="@color/oncolor"
+                android:textOn="ON"
+                android:textOff="OFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/styleswitch"
+                android:onClick="onSty"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@id/style"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
             android:id="@+id/lineE">
         </RelativeLayout>
         <RelativeLayout
@@ -244,4 +284,4 @@
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>
-<!-- From: file:/C:/Users/RXUsagi/Desktop/Testproject1/MyApplication5/app/src/main/res/layout/content_set_alarm.xml -->
+<!-- From: file:/C:/Users/RXUsagi/Desktop/volleyball/MyApplication5/app/src/main/res/layout/content_set_alarm.xml -->
