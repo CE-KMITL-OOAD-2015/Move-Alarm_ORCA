@@ -3,6 +3,7 @@ package com.ma;
 
 import com.google.gson.JsonObject;
 
+import com.ma.model.DbDriver;
 import com.ma.model.JDBC;
 import com.ma.model.LeaderBoard;
 import com.ma.model.Member;
@@ -17,18 +18,19 @@ import java.util.List;
 @RestController
 public class MemberSystem {
 
-        JDBC jdbc = JDBC.getInstance();
+        DbDriver jdbc = JDBC.getInstance();
 
         @RequestMapping("/connect")
-        public JDBC connect(){
+        public DbDriver connect(){
             return jdbc;
         }
 
         @RequestMapping("/getMember")
         public Member getMemberByID(@RequestParam(value = "userID",required = false)
                                         String userID){
-            //handle member
-            Member member = jdbc.getMemberData(userID);
+            Member member = new Member();
+            member.setPk(Integer.parseInt(userID));
+            Boolean found = jdbc.getMemberData(member);
             if(member != null)
                 return member;
             else
@@ -65,11 +67,10 @@ public class MemberSystem {
         }
 
         @RequestMapping(value = "/regMember",method=RequestMethod.POST)
-        public String regMember(@RequestBody  Member member){
+        public String regMember(@RequestBody(required = false) Member member){
             JsonObject jo = new JsonObject();
             if(member != null){
                 int pk = jdbc.getPk(member.getIdFb());
-                member = getMemberByID(pk+"");
                 member.setPk(pk);
                 if(pk == -1)
                     pk = jdbc.insertMember(member);
@@ -79,10 +80,32 @@ public class MemberSystem {
                 jo.addProperty("pk",pk);
                 jo.addProperty("status",s);
                 System.out.println(jo.toString());
-                return jo.toString();
             }
-            else
-                return jo.toString();
+            else {
+                jo.addProperty("pk",-2);
+                jo.addProperty("status","Form not valid");
+            }
+            return jo.toString();
+        }
+
+        @RequestMapping(value = "/updateStatus",method = RequestMethod.POST)
+        public String UpdateStatus(@RequestBody(required = false) Member member){
+            JsonObject jo = new JsonObject();
+            if(member != null) {
+                int pk = member.getPk();
+                String status = member.getStatus();
+                member = getMemberByID(pk + "");
+                if (member != null) {
+                    member.setStatus(status);
+                    jdbc.updateMember(member);
+                }
+                jo.addProperty("pk",pk);
+                jo.addProperty("status","200 OK");
+            }else{
+                jo.addProperty("pk",-2);
+                jo.addProperty("status","Form not valid");
+            }
+            return jo.toString();
         }
 
         @RequestMapping("/addPoint")

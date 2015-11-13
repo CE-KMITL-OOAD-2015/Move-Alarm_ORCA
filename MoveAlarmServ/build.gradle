@@ -20,7 +20,7 @@ apply plugin: 'war'
 
 jar {
     baseName = 'MoveAlarm'
-    version = '0.1.4'
+    version = '0.1.6'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

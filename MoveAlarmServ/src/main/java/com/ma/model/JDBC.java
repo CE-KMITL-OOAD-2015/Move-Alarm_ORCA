@@ -7,7 +7,7 @@ import java.sql.*;
 /**
  * Created by Admin on 10/15/2015.
  */
-public class JDBC {
+public class JDBC implements DbDriver{
 
     private Connection connection;
     //Singerton
@@ -55,22 +55,23 @@ public class JDBC {
         return rs;
     }
 
-    public Member getMemberData(String id){
-        Member temp = null;
+    public boolean getMemberData(Member member){
+        Boolean complete = false;
         try {
-            ResultSet rs = sql("SELECT * FROM Member WHERE Id = " + id);
+            ResultSet rs = sql("SELECT * FROM Member WHERE Id = " + member.getPk());
             System.out.println(rs);
             if(rs.next()) {
-                temp = new Member(rs.getString("First name"),
-                        rs.getString("Last name"),
-                        rs.getString("Gender"),
-                        rs.getInt("Id"));
-                temp.setIdFb(rs.getLong("idFacebook"));
-                temp.setAge(rs.getInt("Age"));
-                temp.setBirthday(rs.getDate("Birthday"));
-                temp.setEmail(rs.getString("Email"));
-                temp.setScore(rs.getInt("Score"));
-                temp.setStatus(rs.getString("Status"));
+                member.setFirstname(rs.getString("First name"));
+                member.setLastname(rs.getString("Last name"));
+                member.setGender(rs.getString("Gender"));
+                member.setPk(rs.getInt("Id"));
+                member.setIdFb(rs.getLong("idFacebook"));
+                member.setAge(rs.getInt("Age"));
+                member.setBirthday(rs.getDate("Birthday"));
+                member.setEmail(rs.getString("Email"));
+                member.setScore(rs.getInt("Score"));
+                member.setStatus(rs.getString("Status"));
+                complete = true;
             }else
                 System.out.println("no data");
         }catch (SQLException ex) {
@@ -79,7 +80,7 @@ public class JDBC {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
-        return temp;
+        return complete;
     }
 
     public int getPk(long idFB){

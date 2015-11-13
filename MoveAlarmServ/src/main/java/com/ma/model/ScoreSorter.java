@@ -5,7 +5,11 @@ import java.util.Comparator;
 /**
  * Created by Admin on 11/4/2015.
  */
-public class ScoreSorter implements Comparator<Member> {
+public class ScoreSorter  implements Comparator<Member> {
+
+    public static ScoreSorter getInstance(){
+        return new ScoreSorter();
+    }
 
     @Override
     public int compare(Member o1, Member o2) {

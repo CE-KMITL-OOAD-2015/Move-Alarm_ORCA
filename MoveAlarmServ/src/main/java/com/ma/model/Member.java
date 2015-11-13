@@ -1,9 +1,7 @@
 package com.ma.model;
 
-
-import com.google.gson.Gson;
-
 import java.sql.Date;
+import java.util.Calendar;
 
 
 /**
@@ -34,7 +32,11 @@ public class Member{
     }
 
     public int getAge() {
-        return age;
+        Calendar calendar = Calendar.getInstance();
+        int nowYear = calendar.get(Calendar.YEAR);
+        calendar.setTime(birthday);
+        int birthYear = calendar.get(Calendar.YEAR);
+        return nowYear-birthYear;
     }
 
     public long getIdFb(){return idFb;}
@@ -108,18 +110,6 @@ public class Member{
     @Override
     public String toString() {
         return String.format("Name : %s %s \n Age : %d\n gender %s\n",firstname,lastname,age,gender);
-    }
-
-    public static Member formGson(String json){
-        Gson gson = new Gson();
-        Member member = gson.fromJson(json,Member.class);
-        return member;
-    }
-
-    public String toJson(){
-        Gson gson = new Gson();
-        String json = gson.toJson(this);
-        return json;
     }
 
 }

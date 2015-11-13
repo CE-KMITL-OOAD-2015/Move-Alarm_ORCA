@@ -5,7 +5,7 @@ package com.ma;
  */
 public class ScoreCalculator {
 
-    private static volatile ScoreCalculator scal = null;
+    private static volatile ScoreCalculator scal;
 
     public static ScoreCalculator getInstance() {
         if (scal == null) {
