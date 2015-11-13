@@ -17,14 +17,18 @@ public class Member{
 
 
     public Member(){
-        this("firstnm dummy","Surnm member","Unknown",0);
+        this("firstnm dummy","Surnm member","Unknown",0,null);
     }
 
-    public Member(String firstname,String lastname,String gender,int pk){
+    public Member(String firstname,String lastname,String gender,int pk,Date birthday){
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;
         this.pk = pk;
+        if(birthday != null){
+            setAge(birthday);
+        }
+        this.birthday = birthday;
     }
 
     public int getPk() {
@@ -32,14 +36,12 @@ public class Member{
     }
 
     public int getAge() {
-        Calendar calendar = Calendar.getInstance();
-        int nowYear = calendar.get(Calendar.YEAR);
-        calendar.setTime(birthday);
-        int birthYear = calendar.get(Calendar.YEAR);
-        return nowYear-birthYear;
+        return age;
     }
 
-    public long getIdFb(){return idFb;}
+    public long getIdFb(){
+        return idFb;
+    }
 
     public Date getBirthday() {
         return birthday;
@@ -69,12 +71,18 @@ public class Member{
         return status;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(Date birthday) {
+        Calendar calendar = Calendar.getInstance();
+        boolean hbd = (birthday.compareTo(calendar.getTime())<0);
+        int nowYear = calendar.get(Calendar.YEAR);
+        calendar.setTime(birthday);
+        int birthYear = calendar.get(Calendar.YEAR);
+        this.age = (hbd)?nowYear-birthYear:nowYear-birthYear+1;
     }
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+        setAge(birthday);
     }
 
     public void setEmail(String email) {
@@ -105,7 +113,9 @@ public class Member{
         this.idFb = idFb;
     }
 
-    public void setPk(int pk) {this.pk = pk;  }
+    public void setPk(int pk) {
+        this.pk = pk;
+    }
 
     @Override
     public String toString() {

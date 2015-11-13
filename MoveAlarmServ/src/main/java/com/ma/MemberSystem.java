@@ -2,18 +2,17 @@ package com.ma;
 
 
 import com.google.gson.JsonObject;
-
 import com.ma.model.DbDriver;
 import com.ma.model.JDBC;
 import com.ma.model.LeaderBoard;
 import com.ma.model.Member;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by Admin on 10/15/2015.
+ * Last modified 10/15/2015.
  */
 @RestController
 public class MemberSystem {
@@ -28,21 +27,24 @@ public class MemberSystem {
         @RequestMapping("/getMember")
         public Member getMemberByID(@RequestParam(value = "userID",required = false)
                                         String userID){
+            int pk = 0;
+            try{
+                pk = Integer.parseInt(userID);
+            }catch (Exception e){//catch format
+                System.err.println(e);
+            }
             Member member = new Member();
-            member.setPk(Integer.parseInt(userID));
+            member.setPk(pk);
             Boolean found = jdbc.getMemberData(member);
-            if(member != null)
-                return member;
-            else
-                return null;
+            return (found) ? member : null;
         }
 
         /**
          * test to check json
          */
-        @RequestMapping("/getFriendListTest")
+        @RequestMapping("/getListTest")
         public List<Member> testFriend(){
-            List<Member> list = new ArrayList<Member>();
+            List<Member> list = new ArrayList<>();
             list.add(new Member());
             list.add(new Member());
             list.add(new Member());
@@ -51,11 +53,10 @@ public class MemberSystem {
 
         @RequestMapping(value = "/getFriendList", method = RequestMethod.POST)
         public List<Member> getFriendListID(@RequestBody ArrayList<String> listID){
-            ArrayList<Member> list = new ArrayList<Member>();
-            Iterator<String> it = listID.iterator();
-            while(it.hasNext()) {
-                int pk = jdbc.getPk(Long.parseLong(it.next()));
-                Member member = getMemberByID(pk+"");
+            ArrayList<Member> list = new ArrayList<>();
+            for (String aListID : listID) {
+                int pk = jdbc.getPk(Long.parseLong(aListID));
+                Member member = getMemberByID(pk + "");
                 System.out.println(member);
                 list.add(member);
             }
@@ -69,42 +70,48 @@ public class MemberSystem {
         @RequestMapping(value = "/regMember",method=RequestMethod.POST)
         public String regMember(@RequestBody(required = false) Member member){
             JsonObject jo = new JsonObject();
+            int pk;
+            String status;
             if(member != null){
-                int pk = jdbc.getPk(member.getIdFb());
+                pk = jdbc.getPk(member.getIdFb());
                 member.setPk(pk);
                 if(pk == -1)
                     pk = jdbc.insertMember(member);
                 else
                     pk = jdbc.updateMember(member);
-                String s = (pk != -1)?"Success ":"Failed";
-                jo.addProperty("pk",pk);
-                jo.addProperty("status",s);
-                System.out.println(jo.toString());
+                status = (pk != -1)?"Success ":"Failed";
             }
             else {
-                jo.addProperty("pk",-2);
-                jo.addProperty("status","Form not valid");
+                pk = -2;
+                status = "Form not valid";
             }
+            jo.addProperty("pk",pk);
+            jo.addProperty("status",status);
+            System.out.println(jo.toString());//check result in server
             return jo.toString();
         }
 
         @RequestMapping(value = "/updateStatus",method = RequestMethod.POST)
         public String UpdateStatus(@RequestBody(required = false) Member member){
             JsonObject jo = new JsonObject();
+            int pk;
+            String result;
             if(member != null) {
-                int pk = member.getPk();
+                pk = member.getPk();
                 String status = member.getStatus();
                 member = getMemberByID(pk + "");
                 if (member != null) {
                     member.setStatus(status);
                     jdbc.updateMember(member);
                 }
-                jo.addProperty("pk",pk);
-                jo.addProperty("status","200 OK");
+                result = "Form OK";
             }else{
-                jo.addProperty("pk",-2);
-                jo.addProperty("status","Form not valid");
+                pk = -2;
+                result = "Form not valid";
             }
+            jo.addProperty("pk",pk);
+            jo.addProperty("status",result);
+            System.out.println(jo.toString());//check result in server
             return jo.toString();
         }
 

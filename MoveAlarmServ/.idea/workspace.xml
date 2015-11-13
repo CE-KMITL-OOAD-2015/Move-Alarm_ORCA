@@ -144,28 +144,18 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/JDBC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+              <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
               <folding>
-                <marker date="1446874165547" expanded="true" signature="2978:3021" placeholder="SELECT * FRO..Member..." />
-                <marker date="1446874165547" expanded="true" signature="3372:3560" placeholder="INSERT INTO ..." />
-                <marker date="1446874165547" expanded="true" signature="4424:4439" placeholder="UPDATE `Memb..." />
-                <marker date="1446874165547" expanded="true" signature="4424:4541" placeholder="UPDATE `Memb..." />
-                <marker date="1446874165547" expanded="true" signature="4424:4571" placeholder="UPDATE `Memb..." />
-                <marker date="1446874165547" expanded="true" signature="4424:4576" placeholder="UPDATE `Memb..." />
-                <marker date="1446874165547" expanded="true" signature="4424:4593" placeholder="UPDATE `Memb..." />
-                <marker date="1446874165547" expanded="true" signature="4424:4594" placeholder="UPDATE `Memb..." />
-                <marker date="1446874165547" expanded="true" signature="5409:5474" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="2920:2963" placeholder="SELECT * FRO..Member..." />
+                <marker date="1447408893762" expanded="true" signature="3314:3502" placeholder="INSERT INTO ..." />
+                <marker date="1447408893762" expanded="true" signature="4366:4381" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="4366:4483" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="4366:4513" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="4366:4518" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="4366:4535" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="4366:4536" placeholder="UPDATE `Memb..." />
+                <marker date="1447408893762" expanded="true" signature="5351:5416" placeholder="UPDATE `Memb..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DbDriver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/DbDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -174,7 +164,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/ScoreCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -184,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/MemberSystem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,10 +182,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.37715518">
               <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding />
             </state>
@@ -206,20 +196,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/ScoreSorter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-              <folding>
-                <element signature="e#197#198#0" expanded="false" />
-                <element signature="e#237#238#0" expanded="false" />
-              </folding>
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Member.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87931037">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -696,14 +683,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ma/view/result.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/view/submiss.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/MoveAlarmAlphaApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ma/model/JDBC.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/DbDriver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ma/model/ScoreSorter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/LeaderBoard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ma/model/ScoreSorter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/ScoreCalculator.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ma/MemberSystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/Member.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ma/model/JDBC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ma/MemberSystem.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -740,12 +727,18 @@
             <id>JPA issues</id>
           </State>
           <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
             <id>SQL</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>SqlResolveInspection</id>
+            <id>ConstantConditions</id>
           </State>
         </selected-state>
       </profile-state>
@@ -1410,7 +1403,7 @@
       <workItem from="1446936725304" duration="676000" />
       <workItem from="1446971929570" duration="2022000" />
       <workItem from="1447324019318" duration="1501000" />
-      <workItem from="1447384913685" duration="4874000" />
+      <workItem from="1447384913685" duration="15890000" />
     </task>
     <task id="LOCAL-00001" summary="Add ServerFile">
       <created>1444915889510</created>
@@ -1428,10 +1421,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150933000" />
+    <option name="totallyTimeSpent" value="161949000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="754" extended-state="1" />
+    <frame x="-8" y="0" width="1378" height="754" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1898,16 +1891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/LeaderBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1915,51 +1898,6 @@
           <folding>
             <element signature="e#210#211#0" expanded="false" />
             <element signature="e#255#256#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/ScoreCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/JDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-          <folding>
-            <marker date="1446874165547" expanded="true" signature="2978:3021" placeholder="SELECT * FRO..Member..." />
-            <marker date="1446874165547" expanded="true" signature="3372:3560" placeholder="INSERT INTO ..." />
-            <marker date="1446874165547" expanded="true" signature="4424:4439" placeholder="UPDATE `Memb..." />
-            <marker date="1446874165547" expanded="true" signature="4424:4541" placeholder="UPDATE `Memb..." />
-            <marker date="1446874165547" expanded="true" signature="4424:4571" placeholder="UPDATE `Memb..." />
-            <marker date="1446874165547" expanded="true" signature="4424:4576" placeholder="UPDATE `Memb..." />
-            <marker date="1446874165547" expanded="true" signature="4424:4593" placeholder="UPDATE `Memb..." />
-            <marker date="1446874165547" expanded="true" signature="4424:4594" placeholder="UPDATE `Memb..." />
-            <marker date="1446874165547" expanded="true" signature="5409:5474" placeholder="UPDATE `Memb..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/DbDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/ScoreSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#197#198#0" expanded="false" />
-            <element signature="e#237#238#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2019,10 +1957,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/DbDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/ScoreSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/JDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
+          <folding>
+            <marker date="1447408893762" expanded="true" signature="2920:2963" placeholder="SELECT * FRO..Member..." />
+            <marker date="1447408893762" expanded="true" signature="3314:3502" placeholder="INSERT INTO ..." />
+            <marker date="1447408893762" expanded="true" signature="4366:4381" placeholder="UPDATE `Memb..." />
+            <marker date="1447408893762" expanded="true" signature="4366:4483" placeholder="UPDATE `Memb..." />
+            <marker date="1447408893762" expanded="true" signature="4366:4513" placeholder="UPDATE `Memb..." />
+            <marker date="1447408893762" expanded="true" signature="4366:4518" placeholder="UPDATE `Memb..." />
+            <marker date="1447408893762" expanded="true" signature="4366:4535" placeholder="UPDATE `Memb..." />
+            <marker date="1447408893762" expanded="true" signature="4366:4536" placeholder="UPDATE `Memb..." />
+            <marker date="1447408893762" expanded="true" signature="5351:5416" placeholder="UPDATE `Memb..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/ScoreCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -2030,20 +2022,18 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/MemberSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/Member.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87931037">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.37715518">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -7,10 +7,17 @@ import java.util.Comparator;
  */
 public class ScoreSorter  implements Comparator<Member> {
 
-    public static ScoreSorter getInstance(){
-        return new ScoreSorter();
+    private static volatile ScoreSorter sorter;
+    public static ScoreSorter getInstance() {
+        if (sorter == null) {
+            synchronized (ScoreSorter.class) {// must test again -- why? This is called "double-checked locking"
+                if (sorter == null) {
+                    sorter = new ScoreSorter();
+                }
+            }
+        }
+        return sorter;
     }
-
     @Override
     public int compare(Member o1, Member o2) {
         if(o1.getScore()<o2.getScore())

@@ -56,7 +56,7 @@ public class JDBC implements DbDriver{
     }
 
     public boolean getMemberData(Member member){
-        Boolean complete = false;
+        Boolean found = false;
         try {
             ResultSet rs = sql("SELECT * FROM Member WHERE Id = " + member.getPk());
             System.out.println(rs);
@@ -66,12 +66,11 @@ public class JDBC implements DbDriver{
                 member.setGender(rs.getString("Gender"));
                 member.setPk(rs.getInt("Id"));
                 member.setIdFb(rs.getLong("idFacebook"));
-                member.setAge(rs.getInt("Age"));
                 member.setBirthday(rs.getDate("Birthday"));
                 member.setEmail(rs.getString("Email"));
                 member.setScore(rs.getInt("Score"));
                 member.setStatus(rs.getString("Status"));
-                complete = true;
+                found = true;
             }else
                 System.out.println("no data");
         }catch (SQLException ex) {
@@ -80,7 +79,7 @@ public class JDBC implements DbDriver{
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
-        return complete;
+        return found;
     }
 
     public int getPk(long idFB){
