@@ -1,17 +1,16 @@
 package com.ma.model;
 
-
-import com.google.gson.Gson;
-
 import java.sql.Date;
+import java.util.Calendar;
 
 
 /**
- * Created by Admin on 10/16/2015.
+ * Last modified by Admin on 10/16/2015.
+ *  10:33 AM
  */
 public class Member{
     private int pk;
-    private String firstname,lastname,gender,email,status;
+    private String firstname,lastname,gender,email,picURL,status;
     private long idFb;
     private int score;
     private Date birthday;
@@ -19,14 +18,18 @@ public class Member{
 
 
     public Member(){
-        this("firstnm dummy","Surnm member","Unknown",0);
+        this("firstnm dummy","Surnm member","Unknown",0,null);
     }
 
-    public Member(String firstname,String lastname,String gender,int pk){
+    public Member(String firstname,String lastname,String gender,int pk,Date birthday){
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;
         this.pk = pk;
+        if(birthday != null){
+            setAge(birthday);
+        }
+        this.birthday = birthday;
     }
 
     public int getPk() {
@@ -37,7 +40,9 @@ public class Member{
         return age;
     }
 
-    public long getIdFb(){return idFb;}
+    public long getIdFb(){
+        return idFb;
+    }
 
     public Date getBirthday() {
         return birthday;
@@ -63,16 +68,26 @@ public class Member{
         return lastname;
     }
 
+    public String getPicURL() {
+        return picURL;
+    }
+
     public String getStatus() {
         return status;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAge(Date birthday) {
+        Calendar calendar = Calendar.getInstance();
+        boolean hbd = (birthday.compareTo(calendar.getTime())<0);
+        int nowYear = calendar.get(Calendar.YEAR);
+        calendar.setTime(birthday);
+        int birthYear = calendar.get(Calendar.YEAR);
+        this.age = (hbd)?nowYear-birthYear:nowYear-birthYear+1;
     }
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+        setAge(birthday);
     }
 
     public void setEmail(String email) {
@@ -103,23 +118,16 @@ public class Member{
         this.idFb = idFb;
     }
 
-    public void setPk(int pk) {this.pk = pk;  }
+    public void setPk(int pk) {
+        this.pk = pk;
+    }
+
+    public void setPicURL(String picURL) {
+        this.picURL = picURL;
+    }
 
     @Override
     public String toString() {
         return String.format("Name : %s %s \n Age : %d\n gender %s\n",firstname,lastname,age,gender);
     }
-
-    public static Member formGson(String json){
-        Gson gson = new Gson();
-        Member member = gson.fromJson(json,Member.class);
-        return member;
-    }
-
-    public String toJson(){
-        Gson gson = new Gson();
-        String json = gson.toJson(this);
-        return json;
-    }
-
 }
