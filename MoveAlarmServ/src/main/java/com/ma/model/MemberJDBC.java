@@ -1,34 +1,44 @@
 package com.ma.model;
 
-import com.ma.model.Member;
-
 import java.sql.*;
 
 /**
  * Created by Admin on 10/15/2015.
  */
-public class JDBC implements DbDriver{
+public class MemberJDBC implements MemberDbDriver {
 
     private Connection connection;
     //Singerton
-    private static volatile JDBC jdbc = null;
+    private static volatile MemberJDBC memberJdbc = null;
 
-    public static JDBC getInstance() {
-        if (jdbc == null) {
-            synchronized (JDBC.class) {// must test again -- why? This is called "double-checked locking"
-                if (jdbc == null) {
-                    jdbc = new JDBC();
+    public static MemberJDBC getInstance() {
+        if (memberJdbc == null) {
+            synchronized (MemberJDBC.class) {// must test again -- why? This is called "double-checked locking"
+                if (memberJdbc == null) {
+                    memberJdbc = new MemberJDBC();
                 }
             }
         }
-        return jdbc;
+        return memberJdbc;
     }
-    public JDBC(){
+
+
+    public MemberJDBC(){
+        String username,password,databaseName,cmdCon;
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            //config here
+            username = "root";
+            password = "admin1234";
+            databaseName = "member";
+            //prepare string
+            cmdCon = String.format("jdbc:mysql://localhost/%s?useUnicode=true&characterEncoding=UTF-8&"+
+                    "user=%s&password=%s",databaseName,username,password);
             connection = DriverManager.getConnection("jdbc:mysql://localhost/member"+
-                            "?useUnicode=true&characterEncoding=UTF-8&"+
-                "user=root&password=admin1234");
+                    "?useUnicode=true&characterEncoding=UTF-8&"+
+                    "user=root&password=admin1234");
+            System.out.println(cmdCon);
+            Class.forName("com.mysql.jdbc.Driver");
+            //print status
             if(connection!=null){
                 System.out.println("Database Connected");
             }else {
@@ -40,25 +50,11 @@ public class JDBC implements DbDriver{
     }
 
 
-    public ResultSet sql(String cmd){
-        ResultSet rs = null;
-
-        try{
-            Statement stmt = connection.createStatement();
-            rs = stmt.executeQuery(cmd);
-        }catch (SQLException ex){
-            ex.printStackTrace();
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
-        }
-        return rs;
-    }
-
     public boolean getMemberData(Member member){
         Boolean found = false;
         try {
-            ResultSet rs = sql("SELECT * FROM Member WHERE Id = " + member.getPk());
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM Member WHERE Id = " + member.getPk());
             System.out.println(rs);
             if(rs.next()) {
                 member.setFirstname(rs.getString("First name"));
@@ -69,6 +65,7 @@ public class JDBC implements DbDriver{
                 member.setBirthday(rs.getDate("Birthday"));
                 member.setEmail(rs.getString("Email"));
                 member.setScore(rs.getInt("Score"));
+                member.setPicURL("PicURL");
                 member.setStatus(rs.getString("Status"));
                 found = true;
             }else
@@ -100,8 +97,8 @@ public class JDBC implements DbDriver{
     public int insertMember(Member member){
         try {
             String sql = "INSERT INTO `Member` " +
-                    "(`First name`,`Last name`,`Gender`,`Email`,`Status`,`idFacebook`,`Score`,`Birthday`,`Age`) " +
-                    "VALUES (?,?,?,?,?,?,?,?,?)";
+                    "(`First name`,`Last name`,`Gender`,`Email`,`Status`,`idFacebook`,`Score`,`Birthday`,`Age`,`PicURL`) " +
+                    "VALUES (?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement pstmt = connection.prepareStatement(sql);
             pstmt.setString(1, member.getFirstname());
             pstmt.setString(2,member.getLastname());
@@ -112,20 +109,21 @@ public class JDBC implements DbDriver{
             pstmt.setInt(7,0);
             pstmt.setDate(8,member.getBirthday());
             pstmt.setInt(9,member.getAge());
+            pstmt.setString(10,member.getPicURL());
             System.out.println(pstmt);
             pstmt.executeUpdate();
-            System.out.println("Insert successfully yay yay");
-            return getPk(member.getIdFb());
+            System.out.println(String.format("Insert data successfully",member.getPk()));
+            return getPk(member.getIdFb());//check is data inserted
         }catch (SQLException e){
             e.printStackTrace();
-            return -1;
+            return -1;// pk = -1 mean sql error
         }
     }
 
     public int updateMember(Member member){
         try {
             String sql = "UPDATE `Member` "+
-            "SET `First name`=?,`Last name`=?,`Gender`=?,`Birthday`=?,`Age`=?,`Email`=?,`Status`=?"+
+            "SET `First name`=?,`Last name`=?,`Gender`=?,`Birthday`=?,`Age`=?,`Email`=?,`Status`=?,`PicURL`=? "+
                     "WHERE Id = "+member.getPk();
 
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -136,13 +134,14 @@ public class JDBC implements DbDriver{
             pstmt.setInt(5,member.getAge());
             pstmt.setString(6,member.getEmail());
             pstmt.setString(7,member.getStatus());
+            pstmt.setString(8,member.getPicURL());
             System.out.println(pstmt);
             pstmt.executeUpdate();
-            System.out.println("Update successfully");
-            return member.getPk();//not effect to pk
+            System.out.println(String.format("ID %d Update successfully",member.getPk()));
+            return getPk(member.getIdFb());//check is update
         }catch (SQLException e){
             e.printStackTrace();
-            return -1;
+            return -1;// pk = -1 mean sql error
         }
     }
 

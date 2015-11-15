@@ -7,14 +7,14 @@ import java.util.*;
  */
 public class LeaderBoard  {
     private List<Member> leaderboard;
-    private ScoreSorter sorter;
+    private ScoreCalculator sorter;
 
     public LeaderBoard(){
         this(new ArrayList<Member>());
     }
     public LeaderBoard(List<Member> memberList){
         leaderboard = new ArrayList<Member>(memberList);
-        sorter = ScoreSorter.getInstance();
+        sorter = ScoreCalculator.getInstance();
         Collections.sort(leaderboard,sorter);
     }
 

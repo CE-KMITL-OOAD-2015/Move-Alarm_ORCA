@@ -3,7 +3,7 @@ package com.ma.model;
 /**
  * Created by Admin on 11/7/2015.
  */
-public interface DbDriver {
+public interface MemberDbDriver {
 
     boolean getMemberData(Member member);
 

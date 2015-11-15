@@ -5,11 +5,12 @@ import java.util.Calendar;
 
 
 /**
- * Created by Admin on 10/16/2015.
+ * Last modified by Admin on 10/16/2015.
+ *  10:33 AM
  */
 public class Member{
     private int pk;
-    private String firstname,lastname,gender,email,status;
+    private String firstname,lastname,gender,email,picURL,status;
     private long idFb;
     private int score;
     private Date birthday;
@@ -67,6 +68,10 @@ public class Member{
         return lastname;
     }
 
+    public String getPicURL() {
+        return picURL;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -117,9 +122,12 @@ public class Member{
         this.pk = pk;
     }
 
+    public void setPicURL(String picURL) {
+        this.picURL = picURL;
+    }
+
     @Override
     public String toString() {
         return String.format("Name : %s %s \n Age : %d\n gender %s\n",firstname,lastname,age,gender);
     }
-
 }

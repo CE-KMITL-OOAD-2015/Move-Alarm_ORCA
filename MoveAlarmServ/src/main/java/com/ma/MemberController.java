@@ -1,26 +1,28 @@
 package com.ma;
 
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.ma.model.DbDriver;
-import com.ma.model.JDBC;
-import com.ma.model.LeaderBoard;
-import com.ma.model.Member;
+import com.google.gson.reflect.TypeToken;
+import com.ma.model.*;
 import org.springframework.web.bind.annotation.*;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Admin on 10/15/2015.
  * Last modified 10/15/2015.
  */
 @RestController
-public class MemberSystem {
+public class MemberController {
 
-        DbDriver jdbc = JDBC.getInstance();
+        MemberDbDriver jdbc = MemberJDBC.getInstance();
 
         @RequestMapping("/connect")
-        public DbDriver connect(){
+        public MemberDbDriver connect(){
             return jdbc;
         }
 
@@ -39,17 +41,6 @@ public class MemberSystem {
             return (found) ? member : null;
         }
 
-        /**
-         * test to check json
-         */
-        @RequestMapping("/getListTest")
-        public List<Member> testFriend(){
-            List<Member> list = new ArrayList<>();
-            list.add(new Member());
-            list.add(new Member());
-            list.add(new Member());
-            return list;
-        }
 
         @RequestMapping(value = "/getFriendList", method = RequestMethod.POST)
         public List<Member> getFriendListID(@RequestBody ArrayList<String> listID){
@@ -58,7 +49,34 @@ public class MemberSystem {
                 int pk = jdbc.getPk(Long.parseLong(aListID));
                 Member member = getMemberByID(pk + "");
                 System.out.println(member);
-                list.add(member);
+                if(member!=null)
+                    list.add(member);
+            }
+            if(!list.isEmpty()) {
+                LeaderBoard leaderBoard = new LeaderBoard(list);
+                return leaderBoard.getLeaderboard();
+            }else
+                return null;
+        }
+
+        @RequestMapping(value = "/getFriendList2", method = RequestMethod.POST)
+        public List<Member> getFriendListID(@RequestBody String listID){
+
+            //decode string to list of id
+            Gson gson = new Gson();
+            Type collectionType = new TypeToken<Map<String,List<Map<String,String>>>>(){}.getType();
+            Map<String, List<Map<String,String>>> myMap = gson.fromJson(listID, collectionType);
+
+
+            ArrayList<Member> list = new ArrayList<>();
+
+            //iterate list id to get leaderboard
+            for (int i = 0;i<myMap.get("friend").size();i++) {
+                int pk = jdbc.getPk(Long.parseLong(myMap.get("friend").get(i).get("id")));
+                Member member = getMemberByID(pk + "");
+                System.out.println(member);
+                if(member!=null)
+                    list.add(member);
             }
             if(!list.isEmpty()) {
                 LeaderBoard leaderBoard = new LeaderBoard(list);
@@ -72,7 +90,9 @@ public class MemberSystem {
             JsonObject jo = new JsonObject();
             int pk;
             String status;
-            if(member != null){
+            System.out.println(member.getPk());
+
+            if(member.getIdFb() != 0L){
                 pk = jdbc.getPk(member.getIdFb());
                 member.setPk(pk);
                 if(pk == -1)
@@ -82,7 +102,7 @@ public class MemberSystem {
                 status = (pk != -1)?"Success ":"Failed";
             }
             else {
-                pk = -2;
+                pk = -2;//non valid code
                 status = "Form not valid";
             }
             jo.addProperty("pk",pk);
@@ -96,7 +116,7 @@ public class MemberSystem {
             JsonObject jo = new JsonObject();
             int pk;
             String result;
-            if(member != null) {
+            if(member.getStatus() != null & member.getPk() != 0) {
                 pk = member.getPk();
                 String status = member.getStatus();
                 member = getMemberByID(pk + "");
@@ -106,7 +126,7 @@ public class MemberSystem {
                 }
                 result = "Form OK";
             }else{
-                pk = -2;
+                pk = -2;//non valid code
                 result = "Form not valid";
             }
             jo.addProperty("pk",pk);
@@ -119,7 +139,7 @@ public class MemberSystem {
         public String increasePoint(@RequestParam(value = "exID",defaultValue = "0") int exID ,
                                   @RequestParam(value = "userID") String id){
             Member member = getMemberByID(id);
-            if(member != null){
+            if(member.getPk() != 0 & exID != 0){
                 ScoreCalculator s = ScoreCalculator.getInstance();
                 int newScore = s.addScore(member.getScore(),exID);
                 jdbc.updatePoint(id,newScore);
@@ -128,7 +148,7 @@ public class MemberSystem {
                 json.addProperty("newScore",newScore);
                 return json.toString();
             }else {
-                System.out.println("not found member");
+                System.out.println("form invalid");
                 return (new JsonObject()).toString();
             }
         }
