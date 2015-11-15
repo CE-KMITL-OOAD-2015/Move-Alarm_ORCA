@@ -65,7 +65,7 @@ public class MemberJDBC implements MemberDbDriver {
                 member.setBirthday(rs.getDate("Birthday"));
                 member.setEmail(rs.getString("Email"));
                 member.setScore(rs.getInt("Score"));
-                member.setPicURL("PicURL");
+                member.setPicURL(rs.getString("PicURL"));
                 member.setStatus(rs.getString("Status"));
                 found = true;
             }else
