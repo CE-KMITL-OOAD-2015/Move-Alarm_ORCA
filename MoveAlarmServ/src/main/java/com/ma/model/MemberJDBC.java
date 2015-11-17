@@ -123,7 +123,7 @@ public class MemberJDBC implements MemberDbDriver {
     public int updateMember(Member member){
         try {
             String sql = "UPDATE `Member` "+
-            "SET `First name`=?,`Last name`=?,`Gender`=?,`Birthday`=?,`Age`=?,`Email`=?,`Status`=?,`PicURL`=? "+
+            "SET `First name`=?,`Last name`=?,`Gender`=?,`Birthday`=?,`Age`=?,`Email`=?,`PicURL`=? "+
                     "WHERE Id = "+member.getPk();
 
             PreparedStatement pstmt = connection.prepareStatement(sql);
@@ -133,8 +133,7 @@ public class MemberJDBC implements MemberDbDriver {
             pstmt.setDate(4,member.getBirthday());
             pstmt.setInt(5,member.getAge());
             pstmt.setString(6,member.getEmail());
-            pstmt.setString(7,member.getStatus());
-            pstmt.setString(8,member.getPicURL());
+            pstmt.setString(7,member.getPicURL());
             System.out.println(pstmt);
             pstmt.executeUpdate();
             System.out.println(String.format("ID %d Update successfully",member.getPk()));
@@ -151,6 +150,21 @@ public class MemberJDBC implements MemberDbDriver {
                     "SET Score = ? WHERE Id = "+ userID;
             PreparedStatement pstmt = connection.prepareStatement(sql);
             pstmt.setInt(1,point);
+            pstmt.executeUpdate();
+            System.out.println("Update Point Successfully");
+            return true;
+        }catch(SQLException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean updateStatus(int userID , String status){
+        try{
+            String sql = "UPDATE `Member` "+
+                    "SET `Status` = ? WHERE Id = "+ userID;
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setString(1,status);
             pstmt.executeUpdate();
             System.out.println("Update Point Successfully");
             return true;
