@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="headerfont">20dp</dimen>
+    <dimen name="normalfontH">16dp</dimen>
+    <dimen name="normalfontN">14dp</dimen>
+    <dimen name="normalfontS">12dp</dimen>
+    <dimen name="normalfontSS">10dp</dimen>
+    <dimen name="setalarmH">100dp</dimen>
+    <dimen name="setalarmW">100dp</dimen>
+    <dimen name="setalarmLH">270dp</dimen>
+    <dimen name="setalarmLHS">180dp</dimen>
+    <dimen name="setalarmLW">120dp</dimen>
+    <dimen name="marginS">10dp</dimen>
+    <dimen name="BoxH">30dp</dimen>
+    <dimen name="BoxV">20dp</dimen>
+    <dimen name="timetext">15dp</dimen>
+    <dimen name="scircleboxLW">100dp</dimen>
+    <dimen name="scircleboxHW">200dp</dimen>
+    <dimen name="scircleboxH">80dp</dimen>
+    <dimen name="scircleboxW">80dp</dimen>
+    <dimen name="dimenbox">60dp</dimen>
+    <dimen name="gapheight">50dp</dimen>
+</resources>
