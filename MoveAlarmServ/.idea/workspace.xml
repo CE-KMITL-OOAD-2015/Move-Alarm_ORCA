@@ -140,24 +140,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MemberJDBC.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MemberJDBC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/MemberJDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6961207">
-              <caret line="67" column="56" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="166" column="25" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
               <folding>
-                <marker date="1447603856360" expanded="true" signature="1835:1867" placeholder="SELECT * FRO..Member..." />
-                <marker date="1447603856360" expanded="true" signature="3066:3109" placeholder="SELECT * FRO..Member..." />
-                <marker date="1447603856360" expanded="true" signature="3460:3659" placeholder="INSERT INTO ..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4666" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4768" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4769" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4810" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4815" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4832" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="4651:4833" placeholder="UPDATE `Memb..." />
-                <marker date="1447603856360" expanded="true" signature="5768:5833" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="1835:1867" placeholder="SELECT * FRO..Member..." />
+                <marker date="1447657490164" expanded="true" signature="3066:3109" placeholder="SELECT * FRO..Member..." />
+                <marker date="1447657490164" expanded="true" signature="3460:3659" placeholder="INSERT INTO ..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4666" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4757" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4758" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4799" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4804" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4821" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="4651:4822" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="5706:5771" placeholder="UPDATE `Memb..." />
+                <marker date="1447657490164" expanded="true" signature="6218:6286" placeholder="UPDATE `Memb..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/MemberController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberDbDriver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/MemberDbDriver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,24 +195,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.4273319">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemberController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/MemberController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -210,10 +221,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -675,16 +684,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/ScoreSorter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/FriendList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/MemberSystem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ma/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/JDBC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ma/model/MemberDbDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/Member.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/ScoreCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/ScoreCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/LeaderBoard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ma/MemberController.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/ma/model/MemberJDBC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ma/model/MemberDbDriver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ma/MemberController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ma/Controller.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -707,8 +716,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1378" />
-    <option name="height" value="754" />
+    <option name="y" value="3" />
+    <option name="width" value="1376" />
+    <option name="height" value="751" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -761,93 +771,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="com/ma">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="com/ma">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="model">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/test/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="com/ma">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -956,6 +879,103 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com/ma">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com/ma">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="model">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="MoveAlarmServ">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/test/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="com/ma">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MoveAlarm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches">
         <subPane>
           <PATH>
@@ -974,16 +994,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MoveAlarm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -994,7 +1004,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="dynamic.classpath" value="false" />
@@ -1404,7 +1414,10 @@
       <workItem from="1447529820601" duration="337000" />
       <workItem from="1447562961382" duration="1193000" />
       <workItem from="1447570253993" duration="13377000" />
-      <workItem from="1447601404865" duration="2270000" />
+      <workItem from="1447601404865" duration="2482000" />
+      <workItem from="1447655855999" duration="501000" />
+      <workItem from="1447656891943" duration="3229000" />
+      <workItem from="1447763174060" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="Add ServerFile">
       <created>1444915889510</created>
@@ -1422,10 +1435,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188185000" />
+    <option name="totallyTimeSpent" value="193276000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="754" extended-state="1" />
+    <frame x="-8" y="3" width="1376" height="751" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1435,14 +1448,14 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24664429" sideWeight="0.46946564" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20516963" sideWeight="0.4126285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20616883" sideWeight="0.4126285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.4969743" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20117474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20147058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26564884" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14170338" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14191176" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1887,61 +1900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/com.ma">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.ma</OriginalElement>
-          <nodes>
-            <node x="244.0" y="1246.0">com.ma.Controller</node>
-            <node x="394.50000000000006" y="319.5">com.ma.model.ScoreSorter</node>
-            <node x="0.0" y="1246.0">com.ma.ScoreCalculator</node>
-            <node x="0.0" y="951.0">com.ma.model.JDBC</node>
-            <node x="434.00000000000006" y="984.0">com.ma.MemberSystem</node>
-            <node x="681.0" y="1246.0">com.ma.MoveAlarmAlphaApplication</node>
-            <node x="437.50000000000006" y="783.5">com.ma.model.LeaderBoard</node>
-            <node x="619.5" y="0.0">com.ma.model.Member</node>
-            <node x="99.50000000000006" y="762.0">com.ma.model.DbDriver</node>
-            <node x="423.0" y="1246.0">com.ma.MoveAlarmAlphaApplicationTests</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.ma.model.JDBC" target="com.ma.model.DbDriver">
-              <point x="0.0" y="-125.0" />
-              <point x="-79.5" y="69.5" />
-            </edge>
-            <edge source="com.ma.MemberSystem" target="com.ma.model.DbDriver">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.ma.MemberSystem" target="com.ma.model.LeaderBoard">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.ma.model.LeaderBoard" target="com.ma.model.ScoreSorter">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.ma.MemberSystem" target="com.ma.model.Member">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.ma.model.LeaderBoard" target="com.ma.model.Member">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.41409691629955947" x="652.0" y="671.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/LeaderBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1950,36 +1908,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/ScoreCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/MoveAlarmAlphaApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29310346">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1993,10 +1925,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/com.ma">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.ma</OriginalElement>
+          <nodes>
+            <node x="" y="">com.ma.Controller</node>
+            <node x="" y="">com.ma.model.MemberDbDriver</node>
+            <node x="" y="">com.ma.model.MemberJDBC</node>
+            <node x="" y="">com.ma.model.ScoreCalculator</node>
+            <node x="" y="">com.ma.MoveAlarmAlphaApplication</node>
+            <node x="" y="">com.ma.model.Member</node>
+            <node x="" y="">com.ma.model.LeaderBoard</node>
+            <node x="" y="">com.ma.MemberController</node>
+            <node x="" y="">com.ma.MoveAlarmAlphaApplicationTests</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.30889679715302487" x="715.0" y="728.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/ScoreCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/MemberDbDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14382403">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2004,7 +1973,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/MemberController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2013,21 +1982,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/model/MemberJDBC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6961207">
-          <caret line="67" column="56" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="166" column="25" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
           <folding>
-            <marker date="1447603856360" expanded="true" signature="1835:1867" placeholder="SELECT * FRO..Member..." />
-            <marker date="1447603856360" expanded="true" signature="3066:3109" placeholder="SELECT * FRO..Member..." />
-            <marker date="1447603856360" expanded="true" signature="3460:3659" placeholder="INSERT INTO ..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4666" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4768" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4769" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4810" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4815" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4832" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="4651:4833" placeholder="UPDATE `Memb..." />
-            <marker date="1447603856360" expanded="true" signature="5768:5833" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="1835:1867" placeholder="SELECT * FRO..Member..." />
+            <marker date="1447657490164" expanded="true" signature="3066:3109" placeholder="SELECT * FRO..Member..." />
+            <marker date="1447657490164" expanded="true" signature="3460:3659" placeholder="INSERT INTO ..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4666" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4757" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4758" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4799" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4804" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4821" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="4651:4822" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="5706:5771" placeholder="UPDATE `Memb..." />
+            <marker date="1447657490164" expanded="true" signature="6218:6286" placeholder="UPDATE `Memb..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ma/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4273319">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

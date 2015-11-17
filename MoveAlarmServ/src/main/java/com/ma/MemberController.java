@@ -1,16 +1,12 @@
 package com.ma;
 
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
 import com.ma.model.*;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Admin on 10/15/2015.
@@ -46,6 +42,7 @@ public class MemberController {
         public List<Member> getFriendListID(@RequestBody ArrayList<String> listID){
             ArrayList<Member> list = new ArrayList<>();
             for (String aListID : listID) {
+                System.out.println(aListID);
                 int pk = jdbc.getPk(Long.parseLong(aListID));
                 Member member = getMemberByID(pk + "");
                 System.out.println(member);
@@ -59,31 +56,7 @@ public class MemberController {
                 return null;
         }
 
-        @RequestMapping(value = "/getFriendList2", method = RequestMethod.POST)
-        public List<Member> getFriendListID(@RequestBody String listID){
 
-            //decode string to list of id
-            Gson gson = new Gson();
-            Type collectionType = new TypeToken<Map<String,List<Map<String,String>>>>(){}.getType();
-            Map<String, List<Map<String,String>>> myMap = gson.fromJson(listID, collectionType);
-
-
-            ArrayList<Member> list = new ArrayList<>();
-
-            //iterate list id to get leaderboard
-            for (int i = 0;i<myMap.get("friend").size();i++) {
-                int pk = jdbc.getPk(Long.parseLong(myMap.get("friend").get(i).get("id")));
-                Member member = getMemberByID(pk + "");
-                System.out.println(member);
-                if(member!=null)
-                    list.add(member);
-            }
-            if(!list.isEmpty()) {
-                LeaderBoard leaderBoard = new LeaderBoard(list);
-                return leaderBoard.getLeaderboard();
-            }else
-                return null;
-        }
 
         @RequestMapping(value = "/regMember",method=RequestMethod.POST)
         public String regMember(@RequestBody(required = false) Member member){
@@ -116,15 +89,13 @@ public class MemberController {
             JsonObject jo = new JsonObject();
             int pk;
             String result;
+            boolean found;
             if(member.getStatus() != null & member.getPk() != 0) {
                 pk = member.getPk();
                 String status = member.getStatus();
-                member = getMemberByID(pk + "");
-                if (member != null) {
-                    member.setStatus(status);
-                    jdbc.updateMember(member);
-                }
+                found = jdbc.updateStatus(pk,status);
                 result = "Form OK";
+                result += (found)?" Successful":" Failed";
             }else{
                 pk = -2;//non valid code
                 result = "Form not valid";

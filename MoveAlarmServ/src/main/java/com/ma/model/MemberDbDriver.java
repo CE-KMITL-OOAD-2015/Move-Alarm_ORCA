@@ -15,4 +15,5 @@ public interface MemberDbDriver {
 
     boolean updatePoint(String userID , int point);
 
+    boolean updateStatus(int pk, String status);
 }
