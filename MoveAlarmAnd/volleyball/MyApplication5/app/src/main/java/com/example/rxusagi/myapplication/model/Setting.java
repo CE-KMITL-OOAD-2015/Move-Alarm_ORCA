@@ -37,7 +37,7 @@ public class Setting {
 
     public void update(){
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean("SOUND", sound);
+        editor.putBoolean("SOUNDONOFF", sound);
         editor.putBoolean("VIBRATE",vibration);
         editor.commit();
     }

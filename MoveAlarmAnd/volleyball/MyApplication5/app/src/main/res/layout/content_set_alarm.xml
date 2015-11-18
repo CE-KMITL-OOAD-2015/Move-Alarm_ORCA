@@ -221,7 +221,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:textSize="@dimen/normalfontH"
+                android:textSize="14dp"
                 android:id="@+id/workingdaytext"/>
         </RelativeLayout>
         <RelativeLayout

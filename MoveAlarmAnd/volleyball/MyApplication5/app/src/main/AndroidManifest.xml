@@ -115,11 +115,6 @@
             android:label="@string/title_activity_event"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity
-            android:name=".HowtoActivity"
-            android:label="@string/title_activity_howto"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
     </application>
 
 </manifest>

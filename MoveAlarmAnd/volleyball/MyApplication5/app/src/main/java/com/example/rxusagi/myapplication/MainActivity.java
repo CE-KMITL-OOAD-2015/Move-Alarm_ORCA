@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -187,9 +188,7 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onHowtouseClicked(View v){
-        Transfer t = new Transfer();
-        //t.getEvent();
-        //t.test3();
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/embed/fmrA-gxJxgQ")));
     }
     public void cancel(){
         if(timer != null){
