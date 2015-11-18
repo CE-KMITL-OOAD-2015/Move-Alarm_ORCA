@@ -72,5 +72,6 @@ public class FriendProfile extends AppCompatActivity {
     public void onBackClick(View v){
         // System.exit(0);
         finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
 }

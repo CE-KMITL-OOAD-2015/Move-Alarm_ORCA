@@ -70,7 +70,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/firstname"
                     android:layout_margin="15dp"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:id="@+id/textView7" />
 
                 <TextView
@@ -102,7 +102,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/lastname"
                     android:layout_margin="15dp"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:id="@+id/textView8" />
 
                 <TextView
@@ -131,7 +131,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/age"
                     android:layout_marginStart="15dp"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:id="@+id/textView9" />
 
                 <TextView
@@ -162,7 +162,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/gender"
                     android:layout_margin="15dp"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:id="@+id/textView10" />
 
                 <TextView
@@ -194,7 +194,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/status"
                     android:layout_margin="15dp"
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:id="@+id/textView11" />
 
                 <TextView
@@ -224,7 +224,7 @@
                     android:layout_alignParentLeft="true"
                     android:text="@string/score"
                     android:layout_margin="15dp"
-                    android:textSize="15dp" />
+                    android:textSize="17dp" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -44,5 +44,6 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/banner"></ListView>
+        android:layout_below="@id/banner"
+        android:id="@+id/listview"></ListView>
 </RelativeLayout>

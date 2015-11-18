@@ -91,12 +91,14 @@ public class StartOfficeActivity extends AppCompatActivity {
             MainActivity.instance().cancel();
             MainActivity.instance().wake();
             finish();
+            overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
         }
     }
     public void onBackClick(View v){
         alarmManagement.alarmState.setStartofficetimehr(hrStart);
         alarmManagement.alarmState.setStartofficetimemn(mnStart);
         finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
     @Override
     protected void onPause() {

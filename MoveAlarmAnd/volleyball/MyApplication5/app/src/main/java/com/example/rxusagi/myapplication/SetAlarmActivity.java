@@ -102,21 +102,27 @@ public class SetAlarmActivity extends AppCompatActivity {
 
     public void onBackClick(View v){
         finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onSettingClicked(View v){
         startActivity(new Intent(getApplicationContext(), SettingActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
     public void onClickWorking(View v){
         startActivity(new Intent(getApplicationContext(), WorkingDay.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
     public void onSetPeriod(View v){
         startActivity(new Intent(getApplicationContext(), SetPeriodActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
     public  void onStartOfficeTime(View v){
         startActivity(new Intent(getApplicationContext(), StartOfficeActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
     public  void onEndOfficeTime(View v){
         startActivity(new Intent(getApplicationContext(), EndOfficeActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void onSty(View v){

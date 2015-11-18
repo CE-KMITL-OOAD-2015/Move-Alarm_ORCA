@@ -145,6 +145,7 @@ public class ProfileActivity extends AppCompatActivity {
             UserManagement.isguest = false;
             UserManagement.instance().createUser();
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }else {
             Toast.makeText(getApplicationContext(),"Please Connect to Internet",Toast.LENGTH_SHORT).show();
         }
@@ -153,10 +154,14 @@ public class ProfileActivity extends AppCompatActivity {
     public void onBackClick(View v){
         // System.exit(0);
         finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     public void onEditClicked(View v){
-        startActivity(new Intent(getApplicationContext(), EditProfile.class));
+        if(!UserManagement.isguest) {
+            startActivity(new Intent(getApplicationContext(), EditProfile.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
     }
 
 }

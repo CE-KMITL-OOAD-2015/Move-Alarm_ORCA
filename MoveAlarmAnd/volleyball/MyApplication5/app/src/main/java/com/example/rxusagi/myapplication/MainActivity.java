@@ -66,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_main);
         bindWidget();
-        setinit();
     }
     @Override
     protected void onStart() {
         super.onStart();
+        setinit();
         mainActivity = this;
         if(Transfer.isOnline(getApplicationContext())){
             Log.i("NET", "ONLINE" + UserManagement.instance().wantLogout);
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, InstructionReceiver.class);
             PendingIntent send = PendingIntent.getBroadcast(MainActivity.this, 0, intent, 0);
             Long time = SystemClock.elapsedRealtime();
-            time += alarmManagement.getNextTimeMillisec() + 10;
+            time += alarmManagement.getNextTimeMillisec();
             if (alarmManagement.getNextTimeMillisec() != -1) {
                 alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                 alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, time, send);
@@ -164,27 +164,32 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onSetAlarmClicked(View v){
         startActivity(new Intent(getApplicationContext(), SetAlarmActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onSettingClicked(View v){
         startActivity(new Intent(getApplicationContext(), SettingActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
     public void onAboutClick(View v){
         startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
     }
     public void onEventClick(View v){
         startActivity(new Intent(getApplicationContext(), EventActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
-
-
     public void onProfileClick(View v){
         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onFriendClick(View v){
         startActivity(new Intent(getApplicationContext(), FriendActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onHowtouseClicked(View v){
         Transfer t = new Transfer();
-        t.test3();
+        //t.getEvent();
+        //t.test3();
     }
     public void cancel(){
         if(timer != null){

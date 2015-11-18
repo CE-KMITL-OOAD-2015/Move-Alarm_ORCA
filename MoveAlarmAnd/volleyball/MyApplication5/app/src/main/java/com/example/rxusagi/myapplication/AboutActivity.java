@@ -17,5 +17,6 @@ public class AboutActivity extends AppCompatActivity {
     public void onBackClick(View v){
        // System.exit(0);
         finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

@@ -72,7 +72,7 @@ public class EndOfficeActivity extends AppCompatActivity {
             String mns = "";
             int h =alarmManagement.alarmState.getStartofficetimehr()+alarmManagement.alarmState.getPeriodHr();
             int m =alarmManagement.alarmState.getStartofficetimemn()+alarmManagement.alarmState.getPeriodMn();
-            if(m > 60){
+            if(m >= 60){
                 m = m - 60;
                 h++;
             }
@@ -89,12 +89,14 @@ public class EndOfficeActivity extends AppCompatActivity {
             MainActivity.instance().cancel();
             MainActivity.instance().wake();
             finish();
+            overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
         }
     }
     public void onBackClick(View v){
         alarmManagement.alarmState.setStopofficetimehr(hrStop);
         alarmManagement.alarmState.setStopofficetimemn(mnStop);
         finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
     @Override
     protected void onPause() {

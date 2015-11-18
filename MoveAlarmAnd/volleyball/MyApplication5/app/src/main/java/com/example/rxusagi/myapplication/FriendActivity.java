@@ -109,7 +109,7 @@ public class FriendActivity extends AppCompatActivity {
                 Log.i("ListPosition",position+" "+FriendManagement.nextfbId);
 
                 startActivity(new Intent(getApplicationContext(), FriendProfile.class));
-
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
         cancelDialog();
@@ -118,6 +118,7 @@ public class FriendActivity extends AppCompatActivity {
     public void onBackClick(View v){
         //setListView();
         finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     public void onMorefriend(View v){
@@ -125,6 +126,7 @@ public class FriendActivity extends AppCompatActivity {
             if (!UserManagement.isguest) {
                 FriendManagement.wantmorefriend = true;
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             } else {
                 Toast.makeText(this, "Please Login", Toast.LENGTH_SHORT).show();
             }

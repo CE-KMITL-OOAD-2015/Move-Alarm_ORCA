@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.example.rxusagi.myapplication.model.transfer.Transfer;
 
+import java.util.ArrayList;
+
 /**
  * Created by RXUsagi on 04/11/2015.
  */
@@ -15,12 +17,14 @@ public class UserManagement {
     public static FriendManagement friendManagement;
     public static boolean wantLogout;
     public static boolean isguest;
+    public static ArrayList<Event> eventArrayList;
     public UserManagement(SharedPreferences sh){
         wantLogout = false;
         userManagement = this;
         friendManagement = new FriendManagement();
         isguest = sh.getBoolean("isguest",false);
         Log.i("isguest",""+isguest);
+        eventArrayList = new ArrayList<Event>();
     }
 
     public static User createUser(){
@@ -49,15 +53,20 @@ public class UserManagement {
     public static void userlogout(){
         wantLogout = false;
     }
-
     public static void willLogout(){
         wantLogout = true;
     }
     public static UserManagement instance(){
         return userManagement;
     }
-
     public void clearFriend(){
         friendManagement = new FriendManagement();
+    }
+    public static void clearEvent(){
+        eventArrayList = new ArrayList<Event>();
+    }
+    public static void addevent(String type,String id,String title,String description,String picURL,String startDate,String endDate){
+        Event event = new Event(type,id,title,description,picURL,startDate,endDate);
+        eventArrayList.add(event);
     }
 }

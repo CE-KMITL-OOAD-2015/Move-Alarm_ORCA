@@ -40,6 +40,21 @@
             </Button>
         </RelativeLayout>
     </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/banner"
+        android:background="@mipmap/bgstart2"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/profilepicture"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/movealarm_icon"
+        android:layout_below="@id/banner"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -67,6 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:textSize="24dp"
                     android:id="@+id/hrCID"
                     />
             </RelativeLayout>
@@ -77,7 +93,7 @@
                 android:layout_above="@id/hrCIDR"
                 android:onClick="onHrUp"
                 android:background="@drawable/ic_arrow_up"
-                />
+                android:id="@+id/imageView3" />
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="50dp"
@@ -85,6 +101,8 @@
                 android:layout_below="@id/hrCIDR"
                 android:onClick="onHrDown"
                 android:background="@drawable/ic_arrow_down"/>
+
+
 
         </RelativeLayout>
         <RelativeLayout
@@ -118,6 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:textSize="24dp"
                     android:id="@+id/mnCID"
                     />
             </RelativeLayout>
@@ -128,7 +147,7 @@
                 android:layout_above="@id/mnCIDR"
                 android:onClick="onMnUp"
                 android:background="@drawable/ic_arrow_up"
-                />
+                android:id="@+id/imageView4" />
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="50dp"
@@ -136,7 +155,9 @@
                 android:layout_below="@id/mnCIDR"
                 android:onClick="onMnDown"
                 android:background="@drawable/ic_arrow_down"/>
-                />
+
+
+
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="wrap_content"

@@ -21,6 +21,7 @@ public class SetPeriodActivity extends AppCompatActivity {
     }
     public void onBackClick(View v){
         finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
 
     public void onClick30(View v){
@@ -97,7 +98,10 @@ public class SetPeriodActivity extends AppCompatActivity {
     }
 
     private void endAct(){
+        MainActivity.instance().cancel();
+        MainActivity.instance().wake();
         finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
     @Override
     protected void onPause() {

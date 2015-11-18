@@ -24,6 +24,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.rxusagi.myapplication.EditProfile;
+import com.example.rxusagi.myapplication.EventActivity;
 import com.example.rxusagi.myapplication.FriendActivity;
 import com.example.rxusagi.myapplication.LoginActivity;
 import com.example.rxusagi.myapplication.MainActivity;
@@ -31,6 +32,7 @@ import com.example.rxusagi.myapplication.ProfileActivity;
 import com.example.rxusagi.myapplication.model.User_Friend.FriendManagement;
 import com.example.rxusagi.myapplication.model.User_Friend.User;
 import com.example.rxusagi.myapplication.model.User_Friend.UserManagement;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -66,7 +68,7 @@ public class Transfer {
                 @Override
                 public void onResponse(JSONObject response) {
                     EditProfile editProfile = EditProfile.instance();
-                    editProfile.finish();
+                    editProfile.onfinish();
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -100,6 +102,47 @@ public class Transfer {
         }
     }
 
+    public void getEvent(){
+        String url = "http://203.151.92.171:8080/getEvent";
+        Log.i("EVENT","START");
+        RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
+        JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                UserManagement.clearEvent();
+                Log.i("JSON EVENT",response.toString());
+                try {
+                    JSONArray today = response.getJSONArray("today");
+                    int index = 0;
+                    while(index < today.length()){
+                        JSONObject todayevent = today.getJSONObject(index);
+                        UserManagement.addevent("TODAY",todayevent.optString("id").toString(),todayevent.optString("title").toString(),todayevent.optString("description").toString(),todayevent.optString("picURL").toString(),todayevent.optString("startDate").toString(),todayevent.optString("endDate").toString());
+                        index++;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    JSONArray upcoming = response.getJSONArray("upcoming");
+                    int index = 0;
+                    while(index < upcoming.length()) {
+                        JSONObject upcomingevent = upcoming.getJSONObject(index);
+                        UserManagement.addevent("UPCOMING",upcomingevent.optString("id").toString(),upcomingevent.optString("title").toString(),upcomingevent.optString("description").toString(),upcomingevent.optString("picURL").toString(),upcomingevent.optString("startDate").toString(),upcomingevent.optString("endDate").toString());
+                        index++;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                EventActivity.instance().cancelWait();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        requestQueue.add(req);
+    }
     public void getUserInfo(){
         User user = User.instance();
         if(user.getPrimaryKey()!=-1){
@@ -312,6 +355,25 @@ public class Transfer {
             });
             requestQueue.add(imageRequest);
         }
+    }
+
+    public void loadImagenocrop(String url, final ImageView imageView){
+        thisImageview = imageView;
+        Log.i("Image Url", url);
+        RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
+        ImageRequest imageRequest = new ImageRequest(url, new Response.Listener<Bitmap>() {
+            @Override
+            public void onResponse(Bitmap response) {
+                thisImageview.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+                thisImageview.setImageBitmap(response);
+            }
+        }, 0, 0, null, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        requestQueue.add(imageRequest);
     }
 
 

@@ -47,6 +47,10 @@ public class EditProfile extends AppCompatActivity {
         }
     }
 
+    public void onfinish(){
+        finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
+    }
     public void onClickbackground(View v){
 
     }

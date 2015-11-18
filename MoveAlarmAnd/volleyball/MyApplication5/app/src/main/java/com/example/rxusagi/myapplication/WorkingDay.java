@@ -59,6 +59,7 @@ public class WorkingDay extends AppCompatActivity {
         working[5] = fri.isChecked();
         working[6] = sat.isChecked();
         alarmManagement.alarmState.setWorkingday(working);
+        alarmManagement.alarmState.update();
         MainActivity.instance().cancel();
         MainActivity.instance().wake();
         super.onPause();
@@ -66,5 +67,6 @@ public class WorkingDay extends AppCompatActivity {
 
     public void onBackClick(View v){
         finish();
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_in_left);
     }
 }

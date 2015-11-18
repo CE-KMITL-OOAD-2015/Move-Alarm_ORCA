@@ -67,6 +67,7 @@ public class ReceiverInstruction extends AppCompatActivity {
     @Override
     protected void onPause() {
         finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         super.onPause();
     }
 

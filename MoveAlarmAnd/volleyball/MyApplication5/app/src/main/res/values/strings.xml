@@ -63,7 +63,8 @@
     <string name="title_activity_friend">FriendActivity</string>
     <string name="leaderboard">Leaderboard</string>
     <string name="title_activity_friend_profile">FriendProfile</string>
-    <string name="firstname">Firstname</string>
+    <string name="firstname">Firstname :</string>
     <string name="event">Event</string>
     <string name="title_activity_event">EventActivity</string>
+    <string name="title_activity_howto">HowtoActivity</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#34b3a0</color>
     <color name="colorheader">#404eccb9</color>
     <color name="colorheadertext">#34b3a0</color>
     <color name="timebox">#B3a9a9a9</color>
@@ -13,10 +13,11 @@
     <color name="white">#FFFFFF</color>
     <color name="colorbgtrans">#804ECCB9</color>
     <color name="colorbgtrans2">#ddf1ff</color>
-    <color name="wallpaperopacity">#40000000</color>
+    <color name="wallpaperopacity">#99000000</color>
     <color name="black">#565656</color>
     <color name="red">#ff0000</color>
     <color name="green">#3cff00</color>
     <color name="gray">#A9A9A9</color>
     <color name="gray2">#CDCDCD</color>
+    <color name="bgmain">#2634b3a0</color>
 </resources>

@@ -92,6 +92,7 @@ public class LoginActivity extends Activity {
                 AppInviteDialog.show(this, content);
             }
             finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
         progressBar = (ProgressBar)findViewById(R.id.progressbar);
         guest = (ImageView)findViewById(R.id.guest);
