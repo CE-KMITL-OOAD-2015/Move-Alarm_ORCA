@@ -1,4 +1,4 @@
-package com.ma.model;
+package com.ma.member;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.ma.model;
+package com.ma.member;
 
 /**
  * Created by Admin on 11/7/2015.

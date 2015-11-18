@@ -1,5 +1,6 @@
-package com.ma.model;
+package com.ma.member;
 
+import com.ma.JDBC;
 import java.sql.*;
 
 /**
@@ -7,53 +8,16 @@ import java.sql.*;
  */
 public class MemberJDBC implements MemberDbDriver {
 
-    private Connection connection;
-    //Singerton
-    private static volatile MemberJDBC memberJdbc = null;
-
-    public static MemberJDBC getInstance() {
-        if (memberJdbc == null) {
-            synchronized (MemberJDBC.class) {// must test again -- why? This is called "double-checked locking"
-                if (memberJdbc == null) {
-                    memberJdbc = new MemberJDBC();
-                }
-            }
-        }
-        return memberJdbc;
-    }
-
+    JDBC jdbc;
 
     public MemberJDBC(){
-        String username,password,databaseName,cmdCon;
-        try{
-            //config here
-            username = "root";
-            password = "admin1234";
-            databaseName = "member";
-            //prepare string
-            cmdCon = String.format("jdbc:mysql://localhost/%s?useUnicode=true&characterEncoding=UTF-8&"+
-                    "user=%s&password=%s",databaseName,username,password);
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/member"+
-                    "?useUnicode=true&characterEncoding=UTF-8&"+
-                    "user=root&password=admin1234");
-            System.out.println(cmdCon);
-            Class.forName("com.mysql.jdbc.Driver");
-            //print status
-            if(connection!=null){
-                System.out.println("Database Connected");
-            }else {
-                System.out.println("Database Connection Failed");
-            }
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+        jdbc = JDBC.getInstance();
     }
-
 
     public boolean getMemberData(Member member){
         Boolean found = false;
         try {
-            Statement stmt = connection.createStatement();
+            Statement stmt = jdbc.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM Member WHERE Id = " + member.getPk());
             System.out.println(rs);
             if(rs.next()) {
@@ -82,7 +46,7 @@ public class MemberJDBC implements MemberDbDriver {
     public int getPk(long idFB){
         int i = -1;
         try{
-            PreparedStatement pstmt = connection.prepareStatement("SELECT * FROM `Member` WHERE idFacebook = ?");
+            PreparedStatement pstmt = jdbc.getConnection().prepareStatement("SELECT * FROM `Member` WHERE idFacebook = ?");
             pstmt.setLong(1,idFB);
             ResultSet rs = pstmt.executeQuery();
             if(rs.next()){
@@ -99,7 +63,7 @@ public class MemberJDBC implements MemberDbDriver {
             String sql = "INSERT INTO `Member` " +
                     "(`First name`,`Last name`,`Gender`,`Email`,`Status`,`idFacebook`,`Score`,`Birthday`,`Age`,`PicURL`) " +
                     "VALUES (?,?,?,?,?,?,?,?,?,?)";
-            PreparedStatement pstmt = connection.prepareStatement(sql);
+            PreparedStatement pstmt = jdbc.getConnection().prepareStatement(sql);
             pstmt.setString(1, member.getFirstname());
             pstmt.setString(2,member.getLastname());
             pstmt.setString(3,member.getGender());
@@ -126,7 +90,7 @@ public class MemberJDBC implements MemberDbDriver {
             "SET `First name`=?,`Last name`=?,`Gender`=?,`Birthday`=?,`Age`=?,`Email`=?,`PicURL`=? "+
                     "WHERE Id = "+member.getPk();
 
-            PreparedStatement pstmt = connection.prepareStatement(sql);
+            PreparedStatement pstmt = jdbc.getConnection().prepareStatement(sql);
             pstmt.setString(1, member.getFirstname());
             pstmt.setString(2,member.getLastname());
             pstmt.setString(3,member.getGender());
@@ -148,7 +112,7 @@ public class MemberJDBC implements MemberDbDriver {
         try{
             String sql = "UPDATE `Member` "+
                     "SET Score = ? WHERE Id = "+ userID;
-            PreparedStatement pstmt = connection.prepareStatement(sql);
+            PreparedStatement pstmt = jdbc.getConnection().prepareStatement(sql);
             pstmt.setInt(1,point);
             pstmt.executeUpdate();
             System.out.println("Update Point Successfully");
@@ -163,7 +127,7 @@ public class MemberJDBC implements MemberDbDriver {
         try{
             String sql = "UPDATE `Member` "+
                     "SET `Status` = ? WHERE Id = "+ userID;
-            PreparedStatement pstmt = connection.prepareStatement(sql);
+            PreparedStatement pstmt = jdbc.getConnection().prepareStatement(sql);
             pstmt.setString(1,status);
             pstmt.executeUpdate();
             System.out.println("Update Point Successfully");
@@ -174,13 +138,4 @@ public class MemberJDBC implements MemberDbDriver {
         }
     }
 
-    public void close(){
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-    }
 }
