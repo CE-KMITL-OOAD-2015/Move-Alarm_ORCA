@@ -109,7 +109,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:id="@+id/vibrationonoff"/>
+                android:id="@+id/vibrationonoff"
+                android:onClick="onVib"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -122,8 +123,7 @@
             android:layout_height="match_parent"
             android:background="@color/dimenboxcolor"
             android:layout_below="@id/lineB">
-
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>
-<!-- From: file:/C:/Users/RXUsagi/Desktop/Testproject1/MyApplication5/app/src/main/res/layout/content_setting.xml -->
+<!-- From: file:/C:/Users/RXUsagi/Desktop/volleyball/MyApplication5/app/src/main/res/layout/content_setting.xml -->
