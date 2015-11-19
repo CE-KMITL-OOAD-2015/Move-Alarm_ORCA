@@ -56,7 +56,6 @@ public class FriendActivity extends AppCompatActivity {
         friendActivity = this;
         if(!UserManagement.isguest) {
             Transfer transfer = new Transfer();
-            transfer.getUserInfo();
             transfer.findFriendProfile(this);
         }else {
             Toast.makeText(this,"Please Login",Toast.LENGTH_SHORT).show();

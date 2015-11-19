@@ -22,6 +22,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.rxusagi.myapplication.EditProfile;
 import com.example.rxusagi.myapplication.EventActivity;
@@ -556,5 +557,21 @@ public class Transfer {
         }
         return connected;
     }
+    public void getyoutubelink(){
+        String url = "http://203.151.92.171:8080/HowToUse";
+        RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.i("how to use url",response);
+                mainActivity.playhowtouse(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
+            }
+        });
+        requestQueue.add(stringRequest);
+    }
 }
