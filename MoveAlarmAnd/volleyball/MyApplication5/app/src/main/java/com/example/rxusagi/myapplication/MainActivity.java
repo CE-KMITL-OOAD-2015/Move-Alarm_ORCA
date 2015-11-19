@@ -184,11 +184,19 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onFriendClick(View v){
+        Transfer transfer = new Transfer();
+        transfer.getUserInfo();
         startActivity(new Intent(getApplicationContext(), FriendActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onHowtouseClicked(View v){
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/embed/fmrA-gxJxgQ")));
+        Transfer transfer = new Transfer();
+        transfer.getyoutubelink();
+    }
+
+    public void playhowtouse(String url){
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void cancel(){
         if(timer != null){

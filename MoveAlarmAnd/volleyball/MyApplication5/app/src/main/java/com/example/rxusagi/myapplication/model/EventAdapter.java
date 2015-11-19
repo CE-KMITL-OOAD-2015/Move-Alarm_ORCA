@@ -1,6 +1,7 @@
 package com.example.rxusagi.myapplication.model;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -54,7 +55,16 @@ public class EventAdapter extends BaseAdapter {
         ImageView imageView = (ImageView)convertView.findViewById(R.id.image);
         Event event = UserManagement.eventArrayList.get(position);
         uptoday.setText(event.getType());
-        date.setText(event.getStartDate() + " - " + event.getEndDate());
+        /**
+        if(event.getType().equals("UPCOMING")){
+            uptoday.setBackgroundColor(Color.parseColor("#fedb65"));
+        }else {
+            uptoday.setBackgroundColor(Color.parseColor("#bcf364"));
+        }
+         **/
+        if(!(event.getStartDate().equals("") && event.getEndDate().equals(""))) {
+            date.setText(event.getStartDate() + " - " + event.getEndDate());
+        }
         header.setText(event.getTitle());
         des.setText(event.getDescription());
         Transfer transfer = new Transfer();
