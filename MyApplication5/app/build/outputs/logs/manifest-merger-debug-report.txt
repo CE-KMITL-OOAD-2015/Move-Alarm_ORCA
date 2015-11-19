@@ -1,0 +1,215 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:2:1-104:12
+	package
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:3:5-48
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:6:22-65
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_CHECKIN_PROPERTIES
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:8:5-84
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:8:22-81
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:9:22-77
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:11:22-63
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:12:22-64
+application
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:14:5-102:19
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [MyApplication5.app.libraries:volley:unspecified] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\MyApplication5.app.libraries\volley\unspecified\AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.android:facebook:4.0.0] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.facebook.android\facebook\4.0.0\AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:17:9-41
+	android:supportsRtl
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:18:9-35
+	android:allowBackup
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:15:9-35
+	android:icon
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:16:9-43
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:19:9-40
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:20:9-22:55
+	android:value
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:22:13-52
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:21:13-58
+activity#com.facebook.FacebookActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:24:9-28:75
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:27:13-45
+	android:configChanges
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:26:13-96
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:28:13-72
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:25:13-57
+activity#com.example.rxusagi.myapplication.MainActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:29:9-33:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:31:13-45
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:32:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:30:13-41
+activity#com.example.rxusagi.myapplication.SetAlarmActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:34:9-38:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:36:13-61
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:35:13-45
+activity#com.example.rxusagi.myapplication.SettingActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:39:9-43:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:41:13-59
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:42:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:40:13-44
+activity#com.example.rxusagi.myapplication.WorkingDay
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:44:9-48:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:46:13-63
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:47:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:45:13-39
+activity#com.example.rxusagi.myapplication.SetPeriodActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:49:9-53:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:51:13-62
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:52:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:50:13-46
+activity#com.example.rxusagi.myapplication.StartOfficeActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:54:9-58:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:56:13-64
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:57:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:55:13-48
+activity#com.example.rxusagi.myapplication.EndOfficeActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:59:9-63:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:61:13-62
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:62:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:60:13-46
+receiver#com.example.rxusagi.myapplication.model.InstructionReceiver
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:65:9-63
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:65:19-60
+activity#com.example.rxusagi.myapplication.ReceiverInstruction
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:67:9-71:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:69:13-72
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:70:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:68:13-48
+activity#com.example.rxusagi.myapplication.AboutActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:72:9-76:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:74:13-57
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:75:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:73:13-42
+activity#com.example.rxusagi.myapplication.Accept_Reject
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:77:9-81:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:79:13-66
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:80:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:78:13-42
+activity#com.example.rxusagi.myapplication.ProfileActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:82:9-86:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:84:13-59
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:85:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:83:13-44
+activity#com.example.rxusagi.myapplication.LoginActivity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:87:9-96:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:89:13-57
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:90:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:88:13-42
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:91:13-95:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:92:17-69
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:92:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:94:17-77
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:94:27-74
+activity#com.example.rxusagi.myapplication.Main2Activity
+ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:97:9-101:20
+	android:label
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:99:13-57
+	android:theme
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:100:13-56
+	android:name
+		ADDED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml:98:13-42
+uses-sdk
+INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [MyApplication5.app.libraries:volley:unspecified] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\MyApplication5.app.libraries\volley\unspecified\AndroidManifest.xml:7:5-43
+MERGED from [com.facebook.android:facebook:4.0.0] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.facebook.android\facebook\4.0.0\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:23.0.1] C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\RXUsagi\Desktop\volleyball\MyApplication5\app\src\main\AndroidManifest.xml

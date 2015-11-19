@@ -109,7 +109,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:id="@+id/vibrationonoff"/>
+                android:id="@+id/vibrationonoff"
+                android:onClick="onVib"/>
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
@@ -122,7 +123,6 @@
             android:layout_height="match_parent"
             android:background="@color/dimenboxcolor"
             android:layout_below="@id/lineB">
-
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>
