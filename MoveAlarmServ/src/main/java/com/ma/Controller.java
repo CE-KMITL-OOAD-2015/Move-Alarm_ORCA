@@ -14,6 +14,11 @@ public class Controller {
         return "Hello Move Alarm Project Server";
     }
 
+    @RequestMapping("/HowToUse")
+    public String HowToUse(){
+        return  "https://www.youtube.com/watch?v=uxpDa-c-4Mc";
+    }
+
     /*to test request
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public String testJson(@RequestBody String str){

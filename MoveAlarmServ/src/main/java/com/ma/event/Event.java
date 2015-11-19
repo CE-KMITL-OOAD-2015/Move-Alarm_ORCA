@@ -73,9 +73,20 @@ public class Event {
         this.title = title;
     }
 
+
     @Override
     public String toString() {
         return String.format("ID %d %s start %s : end %s"
                 ,id,title,startDate.toString(),endDate.toString());
+    }
+
+    public void format(boolean isEvent){
+        if(!isEvent){
+            startDate = null;
+            endDate = null;
+            title = "[News] "+title;
+        }
+        else
+            title = "[Event] "+title;
     }
 }

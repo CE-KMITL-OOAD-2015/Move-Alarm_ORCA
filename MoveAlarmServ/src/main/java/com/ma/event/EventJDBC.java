@@ -36,6 +36,7 @@ public class EventJDBC implements EventDbDriver{
                         rs.getString("picture"),
                         rs.getDate("start"),
                         rs.getDate("end"));
+                event.format(rs.getBoolean("isEvent"));
                 events.add(event);
             }
             rs.last();
@@ -70,6 +71,7 @@ public class EventJDBC implements EventDbDriver{
                         rs.getString("picture"),
                         rs.getDate("start"),
                         rs.getDate("end"));
+                event.format(rs.getBoolean("isEvent"));
                 events.add(event);
             }
             rs.last();

@@ -3,6 +3,7 @@ package com.ma;
 
 import com.google.gson.JsonObject;
 import com.ma.member.*;
+import com.ma.score.ScoreCalculator;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

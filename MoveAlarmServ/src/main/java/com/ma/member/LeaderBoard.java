@@ -1,5 +1,7 @@
 package com.ma.member;
 
+import com.ma.score.ScoreCalculator;
+
 import java.util.*;
 
 /**
