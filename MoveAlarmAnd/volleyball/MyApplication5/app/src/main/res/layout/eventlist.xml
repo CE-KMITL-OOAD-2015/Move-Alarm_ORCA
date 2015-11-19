@@ -14,21 +14,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:id="@+id/uptoday"/>
+                android:textSize="15dp"
+                android:id="@+id/uptoday"
+                android:textColor="@color/gray"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date"
-                android:textSize="18dp"/>
+                android:textSize="15dp"
+                android:textColor="@color/gray"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/header"
-                android:textSize="23dp"/>
+                android:textSize="28dp"/>
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
                 <ImageView
                     android:layout_centerInParent="true"
                     android:layout_width="match_parent"
@@ -36,14 +38,17 @@
                     android:scaleType="fitCenter"
                     android:scrollX="@dimen/activity_vertical_margin"
                     android:id="@+id/image"
-                    android:background="@mipmap/no_image"
+                    android:src="@mipmap/no_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
                     />
             </RelativeLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:id="@+id/description"/>
+                android:textSize="18dp"
+                android:id="@+id/description"
+                android:layout_marginTop="18dp"/>
         </LinearLayout>
     </RelativeLayout>
     <ImageView

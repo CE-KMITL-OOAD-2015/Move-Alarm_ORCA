@@ -1,7 +1,4 @@
 package com.example.rxusagi.myapplication.model;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -14,7 +11,7 @@ public class Exercise {
     private ArrayList<Instruction> all;
     private int sketch;
     public Exercise(InputStreamReader isr){
-        all = getAllInstruction(isr);
+        all = createAllInstruction(isr);
     }
 
     public Instruction randInstruction(String sty){
@@ -32,7 +29,7 @@ public class Exercise {
         return all.get(ans);
     }
 
-    private ArrayList<Instruction> getAllInstruction(InputStreamReader isr) {
+    private ArrayList<Instruction> createAllInstruction(InputStreamReader isr) {
         ArrayList<Instruction> allInstruction = new ArrayList<Instruction>();
         BufferedReader reader = null;
         try {

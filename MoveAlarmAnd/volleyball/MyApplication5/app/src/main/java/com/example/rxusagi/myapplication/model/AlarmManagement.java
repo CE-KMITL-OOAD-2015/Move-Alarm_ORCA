@@ -38,7 +38,7 @@ public class AlarmManagement {
         return  alarmManagement;
     }
 
-    public long getNextTimeMillisec() {
+    public long findNextTimeMillisec() {
         calendar = Calendar.getInstance();
         int dayOfWeek = today();
         long i = dayOfWeek*24*60*60*1000 + calendar.get(Calendar.HOUR_OF_DAY) * 60*60*1000 + calendar.get(Calendar.MINUTE) * 60*1000 + calendar.get(Calendar.SECOND) * 1000;

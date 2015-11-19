@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,12 +18,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.rxusagi.myapplication.model.AlarmManagement;
 import com.example.rxusagi.myapplication.model.InstructionReceiver;
-import com.example.rxusagi.myapplication.model.User_Friend.FriendManagement;
 import com.example.rxusagi.myapplication.model.User_Friend.User;
 import com.example.rxusagi.myapplication.model.User_Friend.UserManagement;
 import com.example.rxusagi.myapplication.model.transfer.Transfer;
@@ -75,14 +72,14 @@ public class MainActivity extends AppCompatActivity {
         mainActivity = this;
         if(Transfer.isOnline(getApplicationContext())){
             Log.i("NET", "ONLINE" + UserManagement.instance().wantLogout);
-            if ((User.instance() == null )&&(UserManagement.isguest!=true)){
+            if ((User.instance() == null )&&(UserManagement.stateguest!=true)){
                 Log.i("NET", "ONLINE2");
                 UserManagement.instance().createUser();
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
 
             }
         }else{
-            if(UserManagement.isguest==false) {
+            if(UserManagement.stateguest==false) {
                 Dialog dialog = new Dialog(MainActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.connectdialog);
@@ -97,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
             }
         }
-        if(UserManagement.isguest){
+        if(UserManagement.stateguest){
             UserManagement.instance().createUser();
             cancelWait();
         }
@@ -115,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         SharedPreferences sh = getSharedPreferences("MOVEALARM_PREFERENCE", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sh.edit();
-        editor.putBoolean("isguest", UserManagement.isguest);
+        editor.putBoolean("stateguest", UserManagement.stateguest);
         editor.commit();
     }
     protected void bindWidget(){
@@ -140,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void count(){
         if(alarmManagement.hasDaytoactivate()) {
-            timer = new CounterClass(alarmManagement.getNextTimeMillisec()+10, 1000);
+            timer = new CounterClass(alarmManagement.findNextTimeMillisec()+10, 1000);
             timer.start();
             wake();
         }
@@ -150,8 +147,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, InstructionReceiver.class);
             PendingIntent send = PendingIntent.getBroadcast(MainActivity.this, 0, intent, 0);
             Long time = SystemClock.elapsedRealtime();
-            time += alarmManagement.getNextTimeMillisec();
-            if (alarmManagement.getNextTimeMillisec() != -1) {
+            time += alarmManagement.findNextTimeMillisec();
+            if (alarmManagement.findNextTimeMillisec() != -1) {
                 alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                 alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, time, send);
             }
@@ -184,11 +181,19 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onFriendClick(View v){
+        Transfer transfer = new Transfer();
+        transfer.downloadUserInfo();
         startActivity(new Intent(getApplicationContext(), FriendActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void onHowtouseClicked(View v){
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/embed/fmrA-gxJxgQ")));
+        Transfer transfer = new Transfer();
+        transfer.loadyoutubelink();
+    }
+
+    public void playhowtouse(String url){
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
     public void cancel(){
         if(timer != null){

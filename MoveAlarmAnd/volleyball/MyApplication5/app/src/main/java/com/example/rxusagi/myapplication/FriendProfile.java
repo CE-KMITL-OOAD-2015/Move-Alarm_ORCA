@@ -47,7 +47,7 @@ public class FriendProfile extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(!UserManagement.isguest) {
+        if(!UserManagement.stateguest) {
             if (friend != null) {
                 header.setText(friend.getName() + " " + friend.getSurname());
                 name.setText(friend.getName());

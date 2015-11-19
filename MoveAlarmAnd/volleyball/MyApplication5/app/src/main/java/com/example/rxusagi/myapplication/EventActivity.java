@@ -39,7 +39,7 @@ public class EventActivity extends AppCompatActivity {
             wait.setCancelable(false);
             wait.show();
             Transfer transfer = new Transfer();
-            transfer.getEvent();
+            transfer.decodeEvent();
         }else{
             noconnection = new Dialog(EventActivity.this);
             noconnection.requestWindowFeature(Window.FEATURE_NO_TITLE);

@@ -2,22 +2,14 @@ package com.example.rxusagi.myapplication;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
-import android.os.SystemClock;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.rxusagi.myapplication.model.AlarmManagement;
 import com.example.rxusagi.myapplication.model.Instruction;
 import com.example.rxusagi.myapplication.model.transfer.Transfer;
-
-import java.net.URLDecoder;
 
 public class ReceiverInstruction extends AppCompatActivity {
     private AlarmManagement alarmManagement;
@@ -45,7 +37,7 @@ public class ReceiverInstruction extends AppCompatActivity {
             Log.i("TAGR", instruction.getInstruction_name() + instruction.getImg() + instruction.getInstruction());
         }
         Transfer transfer = new Transfer();
-        transfer.UpdateScore(Integer.parseInt(instruction.getInstruction()));
+        transfer.updateScore(Integer.parseInt(instruction.getInstruction()));
         Log.i("TAGN","null2");
         name = (TextView)findViewById(R.id.instructionname);
         description = (TextView)findViewById(R.id.description);

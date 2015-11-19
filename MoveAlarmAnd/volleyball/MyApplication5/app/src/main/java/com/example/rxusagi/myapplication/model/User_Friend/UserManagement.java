@@ -16,14 +16,14 @@ public class UserManagement {
     public static User user;
     public static FriendManagement friendManagement;
     public static boolean wantLogout;
-    public static boolean isguest;
+    public static boolean stateguest;
     public static ArrayList<Event> eventArrayList;
     public UserManagement(SharedPreferences sh){
         wantLogout = false;
         userManagement = this;
         friendManagement = new FriendManagement();
-        isguest = sh.getBoolean("isguest",false);
-        Log.i("isguest",""+isguest);
+        stateguest = sh.getBoolean("isguest",false);
+        Log.i("isguest",""+stateguest);
         eventArrayList = new ArrayList<Event>();
     }
 
@@ -36,7 +36,7 @@ public class UserManagement {
         return user;
     }
 
-    public void setUser(String firstname,String lastname,String gender,String email,String idFb,String birthday,String age,String pic){
+    public void regisUser(String firstname, String lastname, String gender, String email, String idFb, String birthday, String age, String pic){
         user.setName(firstname);
         user.setSurname(lastname);
         user.setGender(gender);

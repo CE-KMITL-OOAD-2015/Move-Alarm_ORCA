@@ -12,7 +12,6 @@ import android.graphics.Rect;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import com.android.volley.Request;
@@ -22,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.rxusagi.myapplication.EditProfile;
 import com.example.rxusagi.myapplication.EventActivity;
@@ -32,14 +32,10 @@ import com.example.rxusagi.myapplication.ProfileActivity;
 import com.example.rxusagi.myapplication.model.User_Friend.FriendManagement;
 import com.example.rxusagi.myapplication.model.User_Friend.User;
 import com.example.rxusagi.myapplication.model.User_Friend.UserManagement;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-
 /**
  * Created by RXUsagi on 04/11/2015.
  */
@@ -80,7 +76,7 @@ public class Transfer {
         }
     }
 
-    public void UpdateScore(int type){
+    public void updateScore(int type){
         User user = User.instance();
         if(user.getPrimaryKey()!=-1) {
             String url = "http://203.151.92.171:8080/addPoint?exID=" + type + "&userID=" + user.getPrimaryKey();
@@ -102,9 +98,9 @@ public class Transfer {
         }
     }
 
-    public void getEvent(){
+    public void decodeEvent(){
         String url = "http://203.151.92.171:8080/getEvent";
-        Log.i("EVENT","START");
+        Log.i("EVENT", "START");
         RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
         JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -143,7 +139,7 @@ public class Transfer {
         });
         requestQueue.add(req);
     }
-    public void getUserInfo(){
+    public void downloadUserInfo(){
         User user = User.instance();
         if(user.getPrimaryKey()!=-1){
             String url = "http://203.151.92.171:8080/getMember?userID="+user.getPrimaryKey();
@@ -170,42 +166,6 @@ public class Transfer {
                     if(profileActivity != null) {
                         profileActivity.updateInfo();
                     }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.i("TAGE", "JSONERROR");
-                }
-            });
-            requestQueue.add(req);
-        }
-    }
-
-    public void getUserInfo2(FriendActivity friendActivity2){
-        User user = User.instance();
-        if(user.getPrimaryKey()!=-1){
-            friendActivity2.waitDialog();
-            String url = "http://203.151.92.171:8080/getMember?userID="+user.getPrimaryKey();
-            RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
-            JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-                @Override
-                public void onResponse(JSONObject response) {
-                    User user = User.instance();
-                    if(user.getPrimaryKey() == -1) {
-                        user.setPrimaryKey(Integer.parseInt(response.optString("pk").toString()));
-                    }
-                    user.setName(response.optString("firstname").toString());
-                    user.setSurname(response.optString("lastname").toString());
-                    user.setGender(response.optString("gender").toString());
-                    user.setEmail(response.optString("email").toString());
-                    user.setStatus(response.optString("status").toString());
-                    user.setScore(Integer.parseInt(response.optString("score").toString()));
-                    user.setBirth(response.optString("birthday").toString());
-                    user.setAge(Integer.parseInt(response.optString("age").toString()));
-                    user.setUrl(response.optString("picURL").toString());
-                    Log.i("user", "" + user.getAge() + user.getScore());
-                    Log.i("user", "" + Integer.parseInt(response.optString("age").toString()) + Integer.parseInt(response.optString("score").toString()));
-                    findFriendProfile(FriendActivity.instance());
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -256,30 +216,6 @@ public class Transfer {
         requestQueue.add(req);
     }
 
-    public void testUpdateScore(){
-        String url = "http://203.151.92.171:8080/addPoint?exID="+5+"&userID="+1;
-        //String url = "http://203.151.92.171:8080/addPoint?exID=5&userID=1";
-        Log.i("TAGJSON", "1");
-        RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
-        Log.i("TAGJSON", "1");
-        JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                Log.i("TAGJSON","1");
-                String pk = response.optString("userID").toString();
-                Log.i("TAGJSON", "2");
-                String score = response.optString("newScore").toString();
-                Log.i("TAGJSON", pk + " " + score);
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.i("TAGE","JSONERROR");
-            }
-        });
-        requestQueue.add(req);
-    }
 
     public void findFriendProfile(final FriendActivity friendAct){
         User user = User.instance();
@@ -556,5 +492,21 @@ public class Transfer {
         }
         return connected;
     }
+    public void loadyoutubelink(){
+        String url = "http://203.151.92.171:8080/HowToUse";
+        RequestQueue requestQueue = Volley.newRequestQueue(mainActivity);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.i("how to use url",response);
+                mainActivity.playhowtouse(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
+            }
+        });
+        requestQueue.add(stringRequest);
+    }
 }

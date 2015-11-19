@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,7 +13,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.rxusagi.myapplication.model.User_Friend.FriendManagement;
-import com.example.rxusagi.myapplication.model.User_Friend.User;
 import com.example.rxusagi.myapplication.model.User_Friend.UserManagement;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -36,14 +34,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Set;
 
 public class LoginActivity extends Activity {
@@ -195,7 +188,7 @@ public class LoginActivity extends Activity {
                                 picurl = new URL(Profile.getCurrentProfile().getProfilePictureUri(200, 200).toString());
                                 urlpic = picurl.toString();
                             }
-                            usermanagemnent.setUser(a.optString("first_name").toString(), a.optString("last_name").toString(), a.optString("gender").toString(), a.optString("email").toString(), a.optString("id").toString(), birthdayJA[2] + "-" + birthdayJA[1] + "-" + birthdayJA[0], b.optString("min").toString(), urlpic);
+                            usermanagemnent.regisUser(a.optString("first_name").toString(), a.optString("last_name").toString(), a.optString("gender").toString(), a.optString("email").toString(), a.optString("id").toString(), birthdayJA[2] + "-" + birthdayJA[1] + "-" + birthdayJA[0], b.optString("min").toString(), urlpic);
                         } catch (MalformedURLException e) {
                             e.printStackTrace();
                         }
@@ -219,7 +212,7 @@ public class LoginActivity extends Activity {
     }
 
     public void onGuest(View v){
-        UserManagement.isguest = true;
+        UserManagement.stateguest = true;
         finish();
     }
 }

@@ -54,9 +54,8 @@ public class FriendActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         friendActivity = this;
-        if(!UserManagement.isguest) {
+        if(!UserManagement.stateguest) {
             Transfer transfer = new Transfer();
-            transfer.getUserInfo();
             transfer.findFriendProfile(this);
         }else {
             Toast.makeText(this,"Please Login",Toast.LENGTH_SHORT).show();
@@ -123,7 +122,7 @@ public class FriendActivity extends AppCompatActivity {
 
     public void onMorefriend(View v){
         if(Transfer.isOnline(getApplicationContext())) {
-            if (!UserManagement.isguest) {
+            if (!UserManagement.stateguest) {
                 FriendManagement.wantmorefriend = true;
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
