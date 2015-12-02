@@ -2,7 +2,8 @@ package com.ma;
 
 
 import com.google.gson.JsonObject;
-import com.ma.model.*;
+import com.ma.member.*;
+import com.ma.score.ScoreCalculator;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.List;
 @RestController
 public class MemberController {
 
-        MemberDbDriver jdbc = MemberJDBC.getInstance();
+        MemberDbDriver jdbc = new MemberJDBC();
 
         @RequestMapping("/connect")
         public MemberDbDriver connect(){
